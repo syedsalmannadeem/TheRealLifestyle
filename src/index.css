@@ -143,3 +143,68 @@ button:focus{
   outline: none;
   box-shadow: none !important;
 }
+.flex.text-center.flex-wrap.space-x-2.text-sm.font-medium.text-gray-500.dark\:text-gray-400 {
+  display: inline-block;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.tabs-pills button[aria-selected="true"] {
+  color: #FF4A3F;
+  border: 1px solid #FF4A3F;
+  padding: 7px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 5px !important;
+}
+.tabs-pills button[aria-selected="false"] {
+  color: #565656;
+  border: 1px solid #E0E0E0;
+  padding: 7px 25px;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 5px !important;
+}
+.faq-accordion button {
+  color: black !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e2e2e2;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: left;
+}
+[data-testid="flowbite-accordion-content"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\:rounded-t-lg.last\:rounded-b-lg.hover\:bg-gray-100.focus\:ring-4.focus\:ring-gray-200.dark\:hover\:bg-gray-800.dark\:focus\:ring-gray-800.bg-gray-100.text-gray-900.dark\:bg-gray-800.dark\:text-white h2 {
+  color: #FF4A3F;
+}
+button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\:rounded-t-lg.last\:rounded-b-lg.hover\:bg-gray-100.focus\:ring-4.focus\:ring-gray-200.dark\:hover\:bg-gray-800.dark\:focus\:ring-gray-800.bg-gray-100.text-gray-900.dark\:bg-gray-800.dark\:text-white svg {
+  color: #FF4A3F;
+}
+.faq-accordion button:hover{
+  background: none !important;
+}
+.tabs-pills-eco button:hover{
+  background: none;
+}
+.tabs-pills-eco button[aria-selected="true"] {
+  color: #000;
+  border-bottom: 1px solid #FF4A3F;
+  padding: 7px 25px;
+  border-radius: 0px;
+  display: inline-block;
+  margin: 5px !important;
+}
+.tabs-pills-eco button[aria-selected="false"] {
+  color: #565656;
+  border-bottom: 1px solid #fff;
+  padding: 7px 25px;
+  border-radius: 0px;
+  display: inline-block;
+  margin: 5px !important;
+}
