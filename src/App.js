@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './pages/About';
+import EcoSystem from './pages/EcoSystem';
+import Faq from './pages/Faq';
+import Home from './pages/Home';
+import HowToBuy from './pages/HowToBuy';
+import Invest from './pages/Invest';
+import Live from './pages/Live';
+import Media from './pages/Media';
+import MediaDetails from './pages/MediaDetails';
+import Partners from './pages/Partners';
+import RoadMap from './pages/Roadmap';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        {/* <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav> */}
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/ecosystem" element={<EcoSystem />} />
+          <Route path="/how-to-buy" element={<HowToBuy />} />
+          <Route path="/invest" element={<Invest />} />
+          <Route path="/live" element={<Live />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/media-details" element={<MediaDetails />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/roadmap" element={<RoadMap />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
