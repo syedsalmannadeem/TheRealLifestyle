@@ -3,6 +3,8 @@ import FaqBanner from '../assets/images/faq-hero.png'
 import Topbar from '../components/Topbar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import iconPrev from '../assets/images/icon-previous.png'
+import iconNext from '../assets/images/icon-next.png'
 import { Tabs } from "flowbite-react";
 import { Accordion } from "flowbite-react";
 
@@ -13,7 +15,7 @@ const Faq = () => {
       <Header/>
       <div>
         <div className='max-w-7xl mx-auto mt-5 md:px-0 px-3'>
-          <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 m-2 rounded-[12px] relative' style={{ backgroundImage: `url(${FaqBanner})` }}>
+          <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${FaqBanner})` }}>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-12'>
                     <div className='h-[280px] flex flex-col items-start justify-center'>
@@ -109,6 +111,45 @@ const Faq = () => {
                   <p className="text-sm text-gray-500 dark:text-gray-400">Content 8</p>
                 </Tabs.Item>
               </Tabs>
+            </div>
+            <div className='col-span-12 mt-10'>
+              <ul className='flex flex-row items-center justify-center gap-x-3'>
+                <li>
+                  <a href="/">
+                    <img src={iconPrev} className='max-w-[36px]' alt=""/>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className='text-[#8A8A8A] border-[2px] border-[#8A8A8A] hover:text-[#FF4A3F] hover:border-[#FF4A3F] transition ease-in-out duration-300 px-3 py-1 rounded-[8px] text-center inline-block'>
+                    1
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className='text-[#8A8A8A] border-[2px] border-[#8A8A8A] hover:text-[#FF4A3F] hover:border-[#FF4A3F] transition ease-in-out duration-300 px-3 py-1 rounded-[8px] text-center inline-block'>
+                    2
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className='text-[#8A8A8A] border-[2px] border-[#8A8A8A] hover:text-[#FF4A3F] hover:border-[#FF4A3F] transition ease-in-out duration-300 px-3 py-1 rounded-[8px] text-center inline-block'>
+                    3
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className='text-[#8A8A8A] border-[2px] border-[#8A8A8A] hover:text-[#FF4A3F] hover:border-[#FF4A3F] transition ease-in-out duration-300 px-3 py-1 rounded-[8px] text-center inline-block'>
+                    ...
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className='text-[#8A8A8A] border-[2px] border-[#8A8A8A] hover:text-[#FF4A3F] hover:border-[#FF4A3F] transition ease-in-out duration-300 px-3 py-1 rounded-[8px] text-center inline-block'>
+                    10
+                  </a>
+                </li>
+                <li>
+                  <a href="/">
+                    <img src={iconNext} className='max-w-[36px]' alt=""/>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

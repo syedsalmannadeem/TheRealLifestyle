@@ -1,5 +1,4 @@
-import React from 'react';
-import Logo from '../assets/images/logo-wh.png'
+import React,{ useEffect, useRef, useState } from 'react';
 import bgComingSoon from '../assets/images/bgcomingsoon.png'
 import homeBanner from '../assets/images/home-banner.png'
 import bgInvestIn from '../assets/images/bg-investin.png'
@@ -25,12 +24,6 @@ import clients1 from '../assets/images/clients-1.png'
 import clients2 from '../assets/images/clients-2.png'
 import clients3 from '../assets/images/clients-3.png'
 import clients4 from '../assets/images/clients-4.png'
-import navCompany from '../assets/images/nav-company.png'
-import navLearn from '../assets/images/nav-learn.png'
-import navEcosystem from '../assets/images/nav-ecosystem.png'
-import navInvestment1 from '../assets/images/nav-investment-1.png'
-import navInvestment2 from '../assets/images/nav-investment-2.png'
-import navInvestment3 from '../assets/images/nav-investment-3.png'
 import bgUsp from '../assets/images/bgusp.png'
 import insights1 from '../assets/images/insights-1.png'
 import clientFace1 from '../assets/images/clientface-1.png'
@@ -43,187 +36,41 @@ import { Accordion } from "flowbite-react";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
+import HeaderWhite from '../components/HeaderWhite';
 import Footer from '../components/Footer';
 import Topbar from '../components/Topbar';
 
 
 const Home = () => {
+  const sectionRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = sectionRef.current;
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const inView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        setIsInView(inView);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <div>
         <Topbar/>
         <div className='md:py-2 mt-5'>
             <div className='max-w-[1400px] mx-auto'>
-                <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 m-2 rounded-[12px] relative' style={{ backgroundImage: `url(${homeBanner})` }}>
+                <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${homeBanner})` }}>
                     <img alt="" className='absolute bottom-0 left-0' src={popBottom}/>
                     <div className='grid grid-cols-12 items-center'>
-                        <div className='col-span-12 md:block hidden'>
-                            <div className='grid grid-cols-12 items-center'>
-                                <div className='col-span-1'>
-                                    <img alt="" className='inline' src={Logo}/>
-                                </div>
-                                <div className='col-span-6'>
-                                    <div className="relative group inline mr-4">
-                                        <a className="px-1" href="e-commerce">
-                                            <span className="outfit-medium text-[#FFFFFF] transitiom-all ease-in-out duration-300 md:text-[16px]">
-                                                Investments
-                                            </span>
-                                            <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#ffffff] group-hover:text-[#ffffff]">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </a>
-                                        <div className="absolute z-40 hidden min-w-[580px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
-                                            <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
-                                                <div className="grid grid-cols-12 py-3 px-2">
-                                                    <div className="col-span-12">
-                                                        <div className="relative group md:p-3">
-                                                            <div className='grid grid-cols-12 items-center gap-x-4'>
-                                                                <div className='md:col-span-4'>
-                                                                    <img alt="" src={navInvestment1}/>
-                                                                </div>
-                                                                <div className='md:col-span-4'>
-                                                                    <img alt="" src={navInvestment2}/>
-                                                                </div>
-                                                                <div className='md:col-span-4'>
-                                                                    <img alt="" src={navInvestment3}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div className="relative group inline mr-4">
-                                        <a className="px-1" href="e-commerce">
-                                            <span className="outfit-medium text-[#FFFFFF] transitiom-all ease-in-out duration-300 md:text-[16px]">
-                                                Token Ecosystem
-                                            </span>
-                                            <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#ffffff] group-hover:text-[#ffffff]">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </a>
-                                        <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
-                                            <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
-                                                <div className="grid grid-cols-12 py-3 px-2">
-                                                    <div className="col-span-12">
-                                                        <div className="relative group md:px-5">
-                                                            <div className='grid grid-cols-12 items-center'>
-                                                                <div className='md:col-span-6'>
-                                                                    <ul className='flex flex-col gap-y-4 my-3'>
-                                                                        <li>
-                                                                            <span>Roadmap</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>TRL Ecosystem</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>Whitepaper</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div className='md:col-span-6'>
-                                                                    <img alt="" src={navEcosystem}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div className="relative group inline mr-4">
-                                        <a className="px-1" href="e-commerce">
-                                            <span className="outfit-medium text-[#FFFFFF] transitiom-all ease-in-out duration-300 md:text-[16px]">
-                                                Company
-                                            </span>
-                                            <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#ffffff] group-hover:text-[#ffffff]">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </a>
-                                        <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
-                                            <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
-                                                <div className="grid grid-cols-12 py-3 px-2">
-                                                    <div className="col-span-12">
-                                                        <div className="relative group md:px-5">
-                                                            <div className='grid grid-cols-12 items-center'>
-                                                                <div className='md:col-span-6'>
-                                                                    <ul className='flex flex-col gap-y-4 my-3'>
-                                                                        <li>
-                                                                            <span>Roadmap</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>TRL Ecosystem</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>Whitepaper</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div className='md:col-span-6'>
-                                                                    <img alt="" src={navCompany}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                    <div className="relative group inline mr-4">
-                                        <a className="px-1" href="e-commerce">
-                                            <span className="outfit-medium text-[#FFFFFF] transitiom-all ease-in-out duration-300 md:text-[16px]">
-                                                Learn
-                                            </span>
-                                            <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#ffffff] group-hover:text-[#ffffff]">
-                                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </a>
-                                        <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
-                                            <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
-                                                <div className="grid grid-cols-12 py-3 px-2">
-                                                    <div className="col-span-12">
-                                                        <div className="relative group md:px-5">
-                                                            <div className='grid grid-cols-12 items-center'>
-                                                                <div className='md:col-span-6'>
-                                                                    <ul className='flex flex-col gap-y-4 my-3'>
-                                                                        <li>
-                                                                            <span>Roadmap</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>TRL Ecosystem</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>Whitepaper</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div className='md:col-span-6'>
-                                                                    <img alt="" src={navLearn}/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <div className='col-span-5 text-right'>
-                                    <button className="text-[#ffffff] bg-transparent border-[2px] border-[#fff] text-[16px] outfit-semibold md:px-6 py-2 rounded-[25px] mr-3">Log In</button>
-                                    <button className="text-[#FF4A3F] bg-[#fff] border-[2px] border-[#fff] text-[16px] outfit-semibold md:px-6 py-2 rounded-[25px]">Sign Up</button>
-                                </div>
-                            </div>
-                        </div>
+                        <HeaderWhite/>
                         <div className='col-span-12'>
                             <div className='md:h-[650px] h-[350px] flex flex-col items-center justify-center'>
                                 <span className='text-[#fff] md:text-[72px] text-[38px] leading-[42px] md:leading-[80px] outfit-bold block text-center'>The future of real estate <span className='md:block'>in onchain</span></span>    
@@ -235,11 +82,14 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pt-16 pt-5'>
+        <div className='md:pt-16 pt-5' ref={sectionRef} style={{
+        color: isInView ? '#FF4A3F' : '#FFEEED',
+        transition: 'color 0.3s ease',
+      }}>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
-                        <span className='md:text-[48px] text-[30px] outfit-bold text-[#FFEEED] md:leading-[72px] text-center block max-w-[1000px] mx-auto'>
+                        <span className='md:text-[48px] text-[30px] outfit-bold  md:leading-[72px] text-center block max-w-[1000px] mx-auto'>
                             We are the world’s first 360 RWA ecosystem that drives the flywheel effect for both the consumer and investor when it comes to real estate living, tokenization, DeFi systems and utility rewards.
                         </span>
                     </div>

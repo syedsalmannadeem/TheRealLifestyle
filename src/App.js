@@ -11,6 +11,7 @@ import Media from './pages/Media';
 import MediaDetails from './pages/MediaDetails';
 import Partners from './pages/Partners';
 import RoadMap from './pages/Roadmap';
+import NotFound from './pages/Roadmap';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/media-details" element={<MediaDetails />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/roadmap" element={<RoadMap />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>

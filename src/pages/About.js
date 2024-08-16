@@ -30,7 +30,7 @@ const About = () => {
       <Header/>
       <div>
         <div className='max-w-7xl mx-auto mt-5 md:px-0 px-3'>
-          <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 m-2 rounded-[12px] relative' style={{ backgroundImage: `url(${AboutBanner})` }}>
+          <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${AboutBanner})` }}>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-12'>
                     <div className='h-[280px] flex flex-col items-start justify-center'>

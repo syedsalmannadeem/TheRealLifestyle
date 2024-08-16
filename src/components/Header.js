@@ -15,7 +15,9 @@ const Header = () => {
                 <div className='col-span-12 md:block hidden'>
                     <div className='grid grid-cols-12 items-center'>
                         <div className='col-span-1'>
-                            <img alt="" className='inline' src={Logo}/>
+                            <a href="/">
+                                <img alt="" className='inline' src={Logo}/>
+                            </a>
                         </div>
                         <div className='col-span-6'>
                             <div className="relative group inline mr-4">
@@ -69,58 +71,18 @@ const Header = () => {
                                                         <div className='md:col-span-6'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
-                                                                    <span>Roadmap</span>
+                                                                    <a href="/roadmap">Roadmap</a>
                                                                 </li>
                                                                 <li>
-                                                                    <span>TRL Ecosystem</span>
+                                                                    <a href="/ecosystem">TRL Ecosystem</a>
                                                                 </li>
                                                                 <li>
-                                                                    <span>Whitepaper</span>
+                                                                    <a href="/whitepaper">Whitepaper</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                         <div className='md:col-span-6'>
                                                             <img alt="" src={navEcosystem}/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div className="relative group inline mr-4">
-                                <a className="px-1" href="e-commerce">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 md:text-[16px]">
-                                        Company
-                                    </span>
-                                    <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </a>
-                                <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
-                                    <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
-                                        <div className="grid grid-cols-12 py-3 px-2">
-                                            <div className="col-span-12">
-                                                <div className="relative group md:px-5">
-                                                    <div className='grid grid-cols-12 items-center'>
-                                                        <div className='md:col-span-6'>
-                                                            <ul className='flex flex-col gap-y-4 my-3'>
-                                                                <li>
-                                                                    <span>Roadmap</span>
-                                                                </li>
-                                                                <li>
-                                                                    <span>TRL Ecosystem</span>
-                                                                </li>
-                                                                <li>
-                                                                    <span>Whitepaper</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div className='md:col-span-6'>
-                                                            <img alt="" src={navCompany}/>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -149,13 +111,13 @@ const Header = () => {
                                                         <div className='md:col-span-6'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
-                                                                    <span>Roadmap</span>
+                                                                    <a href="blog">Blog</a>
                                                                 </li>
                                                                 <li>
-                                                                    <span>TRL Ecosystem</span>
+                                                                    <a href="how-to-buy">How to buy</a>
                                                                 </li>
                                                                 <li>
-                                                                    <span>Whitepaper</span>
+                                                                    <a href="faq">FAQ</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -171,6 +133,47 @@ const Header = () => {
                                 </div>
 
                             </div>
+                            <div className="relative group inline mr-4">
+                                <a className="px-1" href="e-commerce">
+                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 md:text-[16px]">
+                                        Company
+                                    </span>
+                                    <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
+                                    <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
+                                        <div className="grid grid-cols-12 py-3 px-2">
+                                            <div className="col-span-12">
+                                                <div className="relative group md:px-5">
+                                                    <div className='grid grid-cols-12 items-center'>
+                                                        <div className='md:col-span-6'>
+                                                            <ul className='flex flex-col gap-y-4 my-3'>
+                                                                <li>
+                                                                    <a href="/about">About</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/media">Media Release</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="/partners">Partners</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div className='md:col-span-6'>
+                                                            <img alt="" src={navCompany}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            
 
                         </div>
                         <div className='col-span-5 text-right'>
