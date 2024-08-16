@@ -6,7 +6,6 @@ import unlockFeature from '../assets/images/unlock-feature.png'
 import popBottom from '../assets/images/pop-bottom.png'
 import iconToken from '../assets/images/icon-tokenization.png'
 import iconEco from '../assets/images/icon-ecosystem.png'
-
 import featured1 from '../assets/images/featured-1.png'
 import featured2 from '../assets/images/featured-2.png'
 import featured3 from '../assets/images/featured-3.png'
@@ -17,7 +16,6 @@ import experienced2 from '../assets/images/experienced-2.png'
 import experienced3 from '../assets/images/experienced-3.png'
 import experienced4 from '../assets/images/experienced-4.png'
 import iconArrowRight from '../assets/images/icon-ar-right.png'
-
 import homeInvest from '../assets/images/home-invest.png'
 import homeLive from '../assets/images/home-live.png'
 import clients1 from '../assets/images/clients-1.png'
@@ -187,7 +185,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pb-16 md:pt-24 md:px-0 px-3 pb-6' style={{ backgroundImage: `url(${bgUsp})` }}>
+        <div className='md:pb-16 md:pt-24 md:px-0 px-3 pb-6 cs-accordion' style={{ backgroundImage: `url(${bgUsp})` }}>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12 items-center md:gap-x-10'>
                     <div className='col-span-12 text-center'>

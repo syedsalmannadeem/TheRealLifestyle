@@ -243,3 +243,10 @@ button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\
     margin-bottom: 8px;
   }
 }
+.cs-accordion button {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.cs-accordion button:hover{
+  background: none;
+}
