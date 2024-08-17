@@ -14,7 +14,7 @@ const Faq = () => {
       <Topbar/>
       <Header/>
       <div>
-        <div className='max-w-7xl mx-auto mt-5 md:px-0 px-3'>
+        <div className='max-w-7xl mx-auto md:mt-5 lg:px-0 px-3'>
           <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${FaqBanner})` }}>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-12'>
@@ -27,7 +27,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-      <div className='md:px-0 px-3 md:py-14 tabs-pills'>
+      <div className='lg:px-0 px-3 md:py-14 tabs-pills'>
         <div className='max-w-5xl mx-auto'>
           <div className='grid grid-cols-12'>
             <div className='col-span-12 text-center'>

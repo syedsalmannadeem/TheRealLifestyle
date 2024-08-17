@@ -22,7 +22,7 @@ const RoadMap = () => {
     <div>
       <Topbar/>
       <Header/>
-      <div className='md:py-16 py-10 md:px-0 px-3'>
+      <div className='md:py-16 py-10 lg:px-0 px-3'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
@@ -71,8 +71,8 @@ const RoadMap = () => {
                             },
                         }}
                     >
-                        <div className='item'>
-                            <div className='mx-auto relative cs-boxshadow md:m-10 m-5 rounded-[25px] md:p-8 p-6'>
+                        <div className='item md:m-0 m-[12px]'>
+                            <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
                                   <li className='text-[#8A8A8A]'>Finalized Corporate Structure, Legal and Tokenization Framework</li>
@@ -94,8 +94,8 @@ const RoadMap = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className='item'>
-                            <div className='mx-auto relative cs-boxshadow md:m-10 m-5 rounded-[25px] md:p-8 p-6'>
+                        <div className='item md:m-0 m-[12px]'>
+                            <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
                                   <li className='text-[#8A8A8A]'>Finalized Corporate Structure, Legal and Tokenization Framework</li>
@@ -117,8 +117,8 @@ const RoadMap = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className='item'>
-                            <div className='mx-auto relative cs-boxshadow md:m-10 m-5 rounded-[25px] md:p-8 p-6'>
+                        <div className='item md:m-0 m-[12px]'>
+                            <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
                                   <li className='text-[#8A8A8A]'>Finalized Corporate Structure, Legal and Tokenization Framework</li>

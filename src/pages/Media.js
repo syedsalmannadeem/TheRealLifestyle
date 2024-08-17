@@ -22,7 +22,7 @@ const Media = () => {
       <Topbar/>
       <Header/>
       <div>
-        <div className='max-w-7xl mx-auto mt-5 md:px-0 px-3'>
+        <div className='max-w-7xl mx-auto md:mt-5 lg:px-0 px-3'>
           <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${NewsroomBanner})` }}>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-12'>
@@ -35,7 +35,7 @@ const Media = () => {
           </div>
         </div>
       </div>
-      <div className='md:pt-16 md:pb-24 py-10 md:px-0 px-3'>
+      <div className='md:pt-16 md:pb-24 py-10 lg:px-0 px-3'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-12 md:gap-6 gap-y-4'>
             <div class="md:mb-5 md:col-span-9 col-span-12">

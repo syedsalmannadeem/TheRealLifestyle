@@ -9,7 +9,7 @@ import iconMap from '../assets/images/icon-map.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F6F6F2] py-6 md:py-8 md:px-0 px-3">
+    <footer className="bg-[#F6F6F2] py-6 md:py-8 lg:px-0 px-3">
         <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-12 items-center'>
                 <div className='md:col-span-6 col-span-12 md:order-1 order-1'>

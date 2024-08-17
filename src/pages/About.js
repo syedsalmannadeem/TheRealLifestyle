@@ -29,7 +29,7 @@ const About = () => {
       <Topbar/>
       <Header/>
       <div>
-        <div className='max-w-7xl mx-auto mt-5 md:px-0 px-3'>
+        <div className='max-w-7xl mx-auto md:mt-5 lg:px-0 px-3'>
           <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${AboutBanner})` }}>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-12'>
@@ -42,7 +42,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='md:py-16 pb-10 pt-5 overflow-x-clip md:px-0 px-3'>
+      <div className='md:py-16 pb-10 pt-5 overflow-x-clip lg:px-0 px-3'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
@@ -62,7 +62,7 @@ const About = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-7xl mx-auto md:pt-0 md:px-0 px-3 py-10'>
+            <div className='max-w-7xl mx-auto md:pt-0 lg:px-0 px-3 py-10'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <img alt="" className='max-w-[900px] w-full mx-auto' src={AboutCta}/>
@@ -70,7 +70,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pt-10 md:pb-16 md:px-0 px-3 py-8'>
+        <div className='md:pt-10 md:pb-16 lg:px-0 px-3 py-8'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12 md:gap-12 gap-3'>
                     <div className='col-span-12 text-center'>
@@ -127,27 +127,27 @@ const About = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pt-16 md:px-0 px-3 py-8 relative'>
-            <img src={particleGt} className='absolute bottom-[-40px] left-[60px]' alt=""/>
+        <div className='md:pt-16 lg:px-0 px-3 py-8 relative'>
+            <img src={particleGt} className='absolute md:bottom-[-40px] md:left-[60px] bottom-[-20px] left-[20px] md:w-auto w-[70px]' alt=""/>
             <div className='max-w-7xl mx-auto bg-[#F6F6F2] md:px-10 md:pt-14 md:pb-[100px] md:rounded-[25px]'>
-                <div className='grid grid-cols-12 md:gap-x-12 md:gap-y-12'>
+                <div className='grid grid-cols-12 md:gap-x-12 md:gap-y-12 gap-y-5'>
                     <div className='col-span-12 text-center'>
-                        <span className='text-[#17271F] md:text-[42px] md:leading-[52px] text-[30px] leading-[34px] outfit-bold block'>Meet the leadership team</span>
+                        <span className='text-[#17271F] md:text-[42px] md:leading-[52px] text-[30px] leading-[34px] outfit-bold block md:mb-0 mb-5'>Meet the leadership team</span>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership1} className='mx-auto mb-2' alt=""/>
+                        <img src={leadership1} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership2} className='mx-auto mb-2' alt=""/>
+                        <img src={leadership2} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership5} className='mx-auto mb-2' alt=""/>
+                        <img src={leadership5} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
@@ -155,13 +155,13 @@ const About = () => {
                     <div className='md:col-span-2 col-span-12'>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership3} className='mx-auto mb-2' alt=""/>
+                        <img src={leadership3} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership4} className='mx-auto mb-2' alt=""/>
+                        <img src={leadership4} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
@@ -170,25 +170,25 @@ const About = () => {
                         <span className='text-[#17271F] md:text-[34px] md:leading-[38px] text-[22px] leading-[26px] outfit-bold block'>Advisor</span>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor1} className='mx-auto mb-2' alt=""/>
+                        <img src={advisor1} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor2} className='mx-auto mb-2' alt=""/>
+                        <img src={advisor2} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor3} className='mx-auto mb-2' alt=""/>
+                        <img src={advisor3} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor4} className='mx-auto mb-2' alt=""/>
+                        <img src={advisor4} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
@@ -196,7 +196,7 @@ const About = () => {
                 </div>
             </div>
         </div>
-        <div className='md:py-16 py-10 md:px-0 px-3'>
+        <div className='md:py-16 py-10 lg:px-0 px-3'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>

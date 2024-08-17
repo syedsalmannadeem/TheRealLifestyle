@@ -15,7 +15,7 @@ const MediaDetails = () => {
       <Topbar/>
       <Header/>
       <div>
-            <div className='max-w-5xl mx-auto md:pt-10 md:px-0 px-3 py-6'>
+            <div className='max-w-5xl mx-auto md:pt-10 lg:px-0 px-3 py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <img alt="" className='max-w-[100%] w-full mx-auto' src={mainImage}/>

@@ -97,9 +97,9 @@ const Invest = () => {
   return (
     <div>
         <Topbar/>
-        <div className='md:py-2 mt-5'>
-            <div className='max-w-[1400px] mx-auto'>
-                <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${homeBanner})` }}>
+        <div className='md:py-2 mt-5 header-white'>
+            <div className='max-w-[1400px] mx-auto lg:px-0 px-3'>
+                <div className='bg-no-repeat bg-cover md:rounded-[50px] lg:p-10 px-5 py-8 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${homeBanner})` }}>
                     <img alt="" className='absolute bottom-0 left-0' src={popBottom}/>
                     <div className='grid grid-cols-12 items-center'>
                         <HeaderWhite/>
@@ -148,7 +148,7 @@ const Invest = () => {
                             items: 1.3,
                             },
                             600: {
-                            items: 2.5,
+                            items: 3.5,
                             },
                             1000: {
                             items: 4.5,
@@ -189,37 +189,37 @@ const Invest = () => {
                         </span>
                     </div>
                     <div className='md:col-span-6 col-span-12 mr-[-60px]'>
-                        <div className='relative md:min-h-[600px]'>
+                        <div className='relative lg:min-h-[600px]'>
                             <img alt="" src={homeInvest} className='h-full w-full relative z-[9]' />
                             <div className='absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-40%] z-[99] max-w-[60%]'>
-                                <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[55px] outfit-bold md:leading-[66px]'>
+                                <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[55px] outfit-bold lg:leading-[66px]'>
                                     Invest in properties globally without getting locked in (or out)
                                 </span>
                                 <span className='block mt-4 md:mt-8 text-[#fff] text-[17px] leading-[24px] outfit-regular'>
                                     Buy a fraction of a portfolio of properties, earn instant real-time yields, and trade easily in our highly liquid marketplace.
                                 </span>
-                                <img alt="" className='md:mt-24 mt-8' src={iconArrowRight} />
+                                <img alt="" className='lg:mt-24 mt-8' src={iconArrowRight} />
                             </div>
                         </div>
                     </div>
-                    <div className='md:col-span-6 col-span-12 ml-[-15px]'>
-                        <div className='relative md:min-h-[612px]'>
+                    <div className='md:col-span-6 col-span-12 lg:ml-[-15px]'>
+                        <div className='relative lg:min-h-[612px] md:min-h-[400px]'>
                             <img alt="" src={homeLive} className='h-full w-full relative z-[-1]' />
                             <div className='absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-35%] z-[1] max-w-[60%]'>
-                                <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[55px] outfit-bold md:leading-[66px]'>
+                                <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[55px] outfit-bold lg:leading-[66px]'>
                                     Experience global living without boundaries
                                 </span>
                                 <span className='block mt-4 md:mt-8 text-[#fff] text-[17px] leading-[24px] outfit-regular'>
                                     Live flexibly anywhere in the world with our pioneering home subscription service and seamless access to global rental and home ownership opportunities.
                                 </span>
-                                <img alt="" className='md:mt-24 mt-8' src={iconArrowRight} />
+                                <img alt="" className='lg:mt-24 mt-8' src={iconArrowRight} />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div className='md:pb-16 pb-10 md:pt-0 pt-5 overflow-x-clip'>
+        <div className='md:pb-16 pb-10 md:pt-0 pt-5 lg:px-0 px-3 overflow-x-clip'>
           <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-12 items-center'>
               <div className='col-span-12 text-center'>
@@ -249,44 +249,44 @@ const Invest = () => {
                     >
                         <div className='item items-center'>
                             <div className='grid grid-cols-12 items-center'>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <span className='block text-[#17271F] outfit-bold mb-2 md:text-[32px] text-[26px]'>Global fractional ownership</span>
                                 <span className='block text-[#565656] md:text-[18px] text-[15px] mb-5 md:max-w-[500px]'>Invest in premium properties worldwide without the burden of high entry costs. Diversify your portfolio across multiple locations and benefit from property value increases in high-growth markets.</span>
                               </div>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <img src={nextGen} className='max-w-[90%] mx-auto' alt=""/>
                               </div>
                             </div>
                         </div>
                         <div className='item items-center'>
                             <div className='grid grid-cols-12 items-center'>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <span className='block text-[#17271F] outfit-bold mb-2 md:text-[32px] text-[26px]'>Global fractional ownership</span>
                                 <span className='block text-[#565656] md:text-[18px] text-[15px] mb-5 md:max-w-[500px]'>Invest in premium properties worldwide without the burden of high entry costs. Diversify your portfolio across multiple locations and benefit from property value increases in high-growth markets.</span>
                               </div>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <img src={nextGen} className='max-w-[90%] mx-auto' alt=""/>
                               </div>
                             </div>
                         </div>
                         <div className='item items-center'>
                             <div className='grid grid-cols-12 items-center'>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <span className='block text-[#17271F] outfit-bold mb-2 md:text-[32px] text-[26px]'>Global fractional ownership</span>
                                 <span className='block text-[#565656] md:text-[18px] text-[15px] mb-5 md:max-w-[500px]'>Invest in premium properties worldwide without the burden of high entry costs. Diversify your portfolio across multiple locations and benefit from property value increases in high-growth markets.</span>
                               </div>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <img src={nextGen} className='max-w-[90%] mx-auto' alt=""/>
                               </div>
                             </div>
                         </div>
                         <div className='item items-center'>
                             <div className='grid grid-cols-12 items-center'>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <span className='block text-[#17271F] outfit-bold mb-2 md:text-[32px] text-[26px]'>Global fractional ownership</span>
                                 <span className='block text-[#565656] md:text-[18px] text-[15px] mb-5 md:max-w-[500px]'>Invest in premium properties worldwide without the burden of high entry costs. Diversify your portfolio across multiple locations and benefit from property value increases in high-growth markets.</span>
                               </div>
-                              <div className='md:col-span-6'>
+                              <div className='md:col-span-6 col-span-12'>
                                 <img src={nextGen} className='max-w-[90%] mx-auto' alt=""/>
                               </div>
                             </div>
@@ -294,7 +294,7 @@ const Invest = () => {
                         </OwlCarousel>
 
                 <div>
-                  <ul className='flex flex-row gap-x-2 items-center'>
+                  <ul className='flex flex-row gap-x-2 items-center md:mt-[-20px] mt-4'>
                     <li onClick={handlePrev}>
                       <img className="max-w-[36px] cursor-pointer" src={iconPrev} alt="Previous" />
                     </li>
@@ -310,7 +310,7 @@ const Invest = () => {
             </div>
           </div>
         </div>
-        <div className='md:py-16 md:px-0 px-3 py-8 relative'>
+        <div className='md:py-16 lg:px-0 px-3 py-8 relative'>
             <div className='max-w-7xl mx-auto bg-[#F6F6F2] md:px-10 px-5 py-8 rounded-[12px] md:py-14 md:rounded-[25px]'>
                 <div className='grid grid-cols-12 md:gap-x-16 md:gap-y-12 items-center'>
                     <div className='col-span-12 text-center'>
@@ -340,7 +340,7 @@ const Invest = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pb-16 py-6 md:px-0 px-3 relative mb-[150px]'>
+        <div className='md:pb-16 py-6 lg:px-0 px-3 relative mb-[150px]'>
           <img src={propertyStripe} alt="" className='absolute bottom-[-100px] left-0 w-full' />
           <div className='max-w-7xl mx-auto relative z-[9]'>
             <div className='grid grid-cols-12 md:gap-5 items-center gap-3'>
@@ -359,7 +359,7 @@ const Invest = () => {
             </div>
           </div>
         </div>
-        <div className='md:pb-16 md:pt-24 md:px-0 px-3 pb-6 cs-accordion' style={{ backgroundImage: `url(${bgUsp})` }}>
+        <div className='md:pb-16 md:pt-24 lg:px-0 px-3 pb-6 cs-accordion' style={{ backgroundImage: `url(${bgUsp})` }}>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12 items-center md:gap-x-10'>
                     <div className='col-span-12 text-center'>
@@ -504,7 +504,7 @@ const Invest = () => {
                 </div>
             </div>
         </div>
-        <div className='md:py-16 md:px-0 px-3'>
+        <div className='md:py-16 lg:px-0 px-3'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
@@ -530,7 +530,7 @@ const Invest = () => {
                 </div>
             </div>
         </div>
-        <div className='md:py-16 md:px-0 px-3 py-8'>
+        <div className='md:py-16 lg:px-0 px-3 py-8'>
             <div className='max-w-[1400px] mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
@@ -542,7 +542,8 @@ const Invest = () => {
                         loop
                         center={true}
                         margin={10}
-                        nav
+                        nav={false}
+                        dots={false}
                         items={5.2}
                         autoplay
                         autoplayTimeout={3000}
@@ -585,12 +586,90 @@ const Invest = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="item">
+                        <div className='grid grid-cols-11 items-center mt-6'>
+                            <div className='md:col-span-3 col-span-12'>
+                                <img alt="" className='md:mb-0 mb-4' src={insights1}/>
+                            </div>
+                            <div className='md:col-span-8 col-span-12'>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                    <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
+                                    <div className='grid grid-cols-12'>
+                                        <div className='md:col-span-5 col-span-9'>
+                                            <div className='flex flex-row items-center gap-x-2'>
+                                                <div>
+                                                    <img alt="" src={clientFace1}/>
+                                                </div>
+                                                <div>
+                                                    <span className='block outfit-bold'>Adrian Gaffor</span>
+                                                    <span className='block text-[#565656]'>Co-founder & CEO</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className='grid grid-cols-11 items-center mt-6'>
+                            <div className='md:col-span-3 col-span-12'>
+                                <img alt="" className='md:mb-0 mb-4' src={insights1}/>
+                            </div>
+                            <div className='md:col-span-8 col-span-12'>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                    <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
+                                    <div className='grid grid-cols-12'>
+                                        <div className='md:col-span-5 col-span-9'>
+                                            <div className='flex flex-row items-center gap-x-2'>
+                                                <div>
+                                                    <img alt="" src={clientFace1}/>
+                                                </div>
+                                                <div>
+                                                    <span className='block outfit-bold'>Adrian Gaffor</span>
+                                                    <span className='block text-[#565656]'>Co-founder & CEO</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className='grid grid-cols-11 items-center mt-6'>
+                            <div className='md:col-span-3 col-span-12'>
+                                <img alt="" className='md:mb-0 mb-4' src={insights1}/>
+                            </div>
+                            <div className='md:col-span-8 col-span-12'>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                    <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
+                                    <div className='grid grid-cols-12'>
+                                        <div className='md:col-span-5 col-span-9'>
+                                            <div className='flex flex-row items-center gap-x-2'>
+                                                <div>
+                                                    <img alt="" src={clientFace1}/>
+                                                </div>
+                                                <div>
+                                                    <span className='block outfit-bold'>Adrian Gaffor</span>
+                                                    <span className='block text-[#565656]'>Co-founder & CEO</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </OwlCarousel>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="bg-no-repeat bg-cover md:px-0 px-3 md:py-0 pt-6" style={{ backgroundImage: `url(${bgComingSoon})` }}>
+        <div className="bg-no-repeat bg-cover lg:px-0 px-3 lg:py-0 pb-6 pt-6" style={{ backgroundImage: `url(${bgComingSoon})` }}>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-12 items-center">
                     <div className="md:col-span-6 col-span-12">
@@ -634,7 +713,7 @@ const Invest = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-7xl mx-auto md:py-24 md:px-0 px-3 py-10'>
+            <div className='max-w-7xl mx-auto md:py-24 lg:px-0 px-3 py-10'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <img alt="" className='max-w-[100%] mx-auto' src={bgInvestIn}/>
@@ -642,7 +721,7 @@ const Invest = () => {
                 </div>
             </div>
         </div>
-        <div className='md:px-0 px-3'>
+        <div className='lg:px-0 px-3'>
             <div className='max-w-7xl mx-auto md:py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>

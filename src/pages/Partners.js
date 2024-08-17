@@ -20,7 +20,7 @@ const Partners = () => {
       <Topbar/>
       <Header/>
         <div>
-            <div className='max-w-5xl mx-auto md:py-4 md:px-0 px-3 py-6'>
+            <div className='max-w-5xl mx-auto md:py-4 lg:px-0 px-3 py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                       <div className='tabs-pills-eco'>
@@ -29,7 +29,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -38,7 +38,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab1} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab1} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -47,10 +47,10 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab1} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab1} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -65,7 +65,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -74,7 +74,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab1} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab1} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -83,10 +83,10 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab1} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab1} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -101,7 +101,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -110,7 +110,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab1} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab1} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -122,7 +122,7 @@ const Partners = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-4 md:px-0 px-3 py-6'>
+            <div className='max-w-5xl mx-auto md:py-4 lg:px-0 px-3 py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                       <div className='tabs-pills-eco'>
@@ -132,8 +132,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -144,8 +144,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -156,8 +156,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -174,8 +174,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -186,8 +186,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -198,8 +198,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -216,8 +216,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -228,8 +228,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -240,8 +240,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -258,8 +258,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -270,8 +270,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -282,8 +282,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -300,8 +300,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -312,8 +312,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -324,8 +324,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -344,7 +344,7 @@ const Partners = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-4 md:px-0 px-3 py-6'>
+            <div className='max-w-5xl mx-auto md:py-4 lg:px-0 px-3 py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                       <div className='tabs-pills-eco'>
@@ -353,7 +353,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -362,7 +362,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab2} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab2} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -371,10 +371,10 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab2} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab2} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -389,7 +389,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -398,7 +398,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab2} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab2} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -407,10 +407,10 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab2} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab2} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -425,7 +425,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -434,7 +434,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab2} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab2} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -446,7 +446,7 @@ const Partners = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-4 md:px-0 px-3 py-6'>
+            <div className='max-w-5xl mx-auto md:py-4 lg:px-0 px-3 py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                       <div className='tabs-pills-eco'>
@@ -455,7 +455,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -464,7 +464,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab3} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab3} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -473,10 +473,10 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab3} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab3} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -491,7 +491,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -500,7 +500,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab3} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab3} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -509,10 +509,10 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab3} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab3} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -527,7 +527,7 @@ const Partners = () => {
                             <div className='mt-5'>
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <span className='block text-[24px] outfit-bold text-[#17271F]'>
+                                  <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
                                     TRL Platform
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
@@ -536,7 +536,7 @@ const Partners = () => {
                                   <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[14px] outfit-semibold md:px-6 px-5 py-2 rounded-[25px] mr-3">Learn more</button>
                                 </div>
                                 <div className='md:col-span-6 col-span-12'>
-                                  <img src={ecosystemtab3} className="md:mt-0 mt-8" alt=""/>
+                                  <img src={ecosystemtab3} className="md:mt-0 mt-8 w-full" alt=""/>
                                 </div>
                               </div>
                             </div>
@@ -548,7 +548,7 @@ const Partners = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-4 md:px-0 px-3 py-6 mb-6'>
+            <div className='max-w-5xl mx-auto md:py-4 lg:px-0 px-3 py-6 mb-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                       <div className='tabs-pills-eco'>
@@ -558,8 +558,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab4} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab4} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -570,8 +570,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab5} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab5} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -582,8 +582,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab6} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab6} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -600,8 +600,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -612,8 +612,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -624,8 +624,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -642,8 +642,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab4} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab4} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -654,8 +654,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab5} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab5} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -666,8 +666,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab6} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab6} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -684,8 +684,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab1} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -696,8 +696,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab2} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -708,8 +708,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab3} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -726,8 +726,8 @@ const Partners = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab4} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab4} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -738,8 +738,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab5} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab5} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
@@ -750,8 +750,8 @@ const Partners = () => {
                                 </div>
                                 <div className='md:col-span-4 col-span-12'>
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
-                                    <img src={listtab6} className="md:mt-0 mt-8" alt=""/>
-                                    <span className='block text-[20px] mt-2 outfit-bold text-[#17271F]'>
+                                    <img src={listtab6} className="md:mt-0 mt-8 w-full" alt=""/>
+                                    <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
                                       TRL Platform
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>

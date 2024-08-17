@@ -13,7 +13,7 @@ const HowToBuy = () => {
       <Topbar/>
       <Header/>
       <div>
-        <div className='max-w-7xl mx-auto mt-5 md:px-0 px-3'>
+        <div className='max-w-7xl mx-auto md:mt-5 lg:px-0 px-3'>
           <div className='bg-no-repeat bg-cover md:rounded-[50px] p-10 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${HowToBuyBanner})` }}>
             <div className='grid grid-cols-12 items-center'>
                 <div className='col-span-12'>
@@ -26,7 +26,7 @@ const HowToBuy = () => {
           </div>
         </div>
       </div>
-      <div className='md:py-16 md:px-0 px-3 py-8 relative'>
+      <div className='md:py-16 lg:px-0 px-3 py-8 relative'>
             <div className='max-w-7xl mx-auto bg-[#F6F6F2] md:px-10 px-5 py-8 rounded-[12px] md:pt-14 md:pb-[50px] md:rounded-[25px]'>
                 <div className='grid grid-cols-12 md:gap-y-12 items-center'>
                     <div className='col-span-12 text-center'>

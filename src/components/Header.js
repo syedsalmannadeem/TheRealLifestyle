@@ -6,10 +6,11 @@ import navEcosystem from '../assets/images/nav-ecosystem.png'
 import navInvestment1 from '../assets/images/nav-investment-1.png'
 import navInvestment2 from '../assets/images/nav-investment-2.png'
 import navInvestment3 from '../assets/images/nav-investment-3.png'
+import { Navbar, Dropdown} from 'flowbite-react';
 
 const Header = () => {
   return (
-    <div className="md:px-0 px-3 md:py-4 py-3">
+    <div className="lg:px-0 px-3 md:py-4 py-3 header-colored">
         <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-12'>
                 <div className='col-span-12 md:block hidden'>
@@ -19,10 +20,10 @@ const Header = () => {
                                 <img alt="" className='inline' src={Logo}/>
                             </a>
                         </div>
-                        <div className='col-span-6'>
+                        <div className='col-span-7'>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="e-commerce">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 md:text-[16px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Investments
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
@@ -55,20 +56,20 @@ const Header = () => {
                             </div>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="e-commerce">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 md:text-[16px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Token Ecosystem
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                     </svg>
                                 </a>
-                                <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
+                                <div className="absolute z-40 hidden lg:min-w-[480px] min-w-[280px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
                                     <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
                                         <div className="grid grid-cols-12 py-3 px-2">
                                             <div className="col-span-12">
-                                                <div className="relative group md:px-5">
+                                                <div className="relative group lg:px-5 px-3">
                                                     <div className='grid grid-cols-12 items-center'>
-                                                        <div className='md:col-span-6'>
+                                                        <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
                                                                     <a href="/roadmap">Roadmap</a>
@@ -81,7 +82,7 @@ const Header = () => {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div className='md:col-span-6'>
+                                                        <div className='lg:col-span-6 col-span-12'>
                                                             <img alt="" src={navEcosystem}/>
                                                         </div>
                                                     </div>
@@ -95,20 +96,20 @@ const Header = () => {
                             </div>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="e-commerce">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 md:text-[16px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Learn
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                     </svg>
                                 </a>
-                                <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
+                                <div className="absolute z-40 hidden lg:min-w-[480px] min-w-[280px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
                                     <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
                                         <div className="grid grid-cols-12 py-3 px-2">
                                             <div className="col-span-12">
-                                                <div className="relative group md:px-5">
+                                                <div className="relative group lg:px-5 px-3">
                                                     <div className='grid grid-cols-12 items-center'>
-                                                        <div className='md:col-span-6'>
+                                                        <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
                                                                     <a href="blog">Blog</a>
@@ -121,7 +122,7 @@ const Header = () => {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div className='md:col-span-6'>
+                                                        <div className='lg:col-span-6 col-span-12'>
                                                             <img alt="" src={navLearn}/>
                                                         </div>
                                                     </div>
@@ -135,20 +136,20 @@ const Header = () => {
                             </div>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="e-commerce">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 md:text-[16px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Company
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                     </svg>
                                 </a>
-                                <div className="absolute z-40 hidden min-w-[480px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
+                                <div className="absolute z-40 hidden lg:min-w-[480px] min-w-[280px] pt-3 transition duration-150 ease-out group-hover:block hover:ease-in left-0 overflow-hidden">
                                     <div className="rounded-[15px] relative z-50  bg-[#fff] border-b-[2px]">
                                         <div className="grid grid-cols-12 py-3 px-2">
                                             <div className="col-span-12">
-                                                <div className="relative group md:px-5">
+                                                <div className="relative group lg:px-5 px-3">
                                                     <div className='grid grid-cols-12 items-center'>
-                                                        <div className='md:col-span-6'>
+                                                        <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
                                                                     <a href="/about">About</a>
@@ -161,7 +162,7 @@ const Header = () => {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <div className='md:col-span-6'>
+                                                        <div className='lg:col-span-6 col-span-12'>
                                                             <img alt="" src={navCompany}/>
                                                         </div>
                                                     </div>
@@ -176,12 +177,50 @@ const Header = () => {
                             
 
                         </div>
-                        <div className='col-span-5 text-right'>
+                        <div className='col-span-4 text-right'>
                             <button className="text-[#FF4A3F] bg-transparent border-[2px] border-[#FF4A3F] text-[16px] outfit-semibold md:px-6 py-2 rounded-[25px] mr-3">Log In</button>
                             <button className="text-[#fff] bg-[#FF4A3F] border-[2px] border-[#FF4A3F] text-[16px] outfit-semibold md:px-6 py-2 rounded-[25px]">Sign Up</button>
                         </div>
                     </div>
                 </div>
+                <div className='col-span-12 md:hidden block'>
+                            <Navbar className='bg-transparent' fluid={true} rounded={true}>
+                                <Navbar.Brand href="/">
+                                    <img
+                                    src={Logo}
+                                    className="mr-3 h-6 sm:h-9"
+                                    alt="Logo"
+                                    />
+                                </Navbar.Brand>
+                                <Navbar.Toggle />
+                                <Navbar.Collapse>
+                                    <Navbar.Link href="/" active={true}>
+                                    Home
+                                    </Navbar.Link>
+                                    <Navbar.Link href="/live">
+                                    Live Extended
+                                    </Navbar.Link>
+                                    <Navbar.Link href="/invest">
+                                    Invest Extended
+                                    </Navbar.Link>
+                                    <Dropdown label="Token Ecosystem" inline={true}>
+                                    <Dropdown.Item href="/roadmap">Roadmap</Dropdown.Item>
+                                    <Dropdown.Item href="/ecosystem">TRL Ecosystem</Dropdown.Item>
+                                    <Dropdown.Item href="/whitepaper">Whitepaper</Dropdown.Item>
+                                    </Dropdown>
+                                    <Dropdown label="Learn" inline={true}>
+                                    <Dropdown.Item href="/blog">Blog</Dropdown.Item>
+                                    <Dropdown.Item href="/how-to-buy">How to Buy</Dropdown.Item>
+                                    <Dropdown.Item href="/faq">FAQ</Dropdown.Item>
+                                    </Dropdown>
+                                    <Dropdown label="Company" inline={true}>
+                                    <Dropdown.Item href="/about">About</Dropdown.Item>
+                                    <Dropdown.Item href="/media">Media Releases</Dropdown.Item>
+                                    <Dropdown.Item href="/partners">Partners</Dropdown.Item>
+                                    </Dropdown>
+                                </Navbar.Collapse>
+                            </Navbar>
+                        </div>
             </div>
         </div>
     </div>

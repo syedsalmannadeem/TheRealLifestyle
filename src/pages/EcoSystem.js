@@ -12,7 +12,7 @@ const EcoSystem = () => {
     <div>
       <Topbar/>
       <Header/>
-      <div className='md:pt-16 py-10 md:px-0 px-3'>
+      <div className='md:pt-16 py-10 lg:px-0 px-3'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
@@ -30,7 +30,7 @@ const EcoSystem = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-10 md:px-0 px-3 py-10'>
+            <div className='max-w-5xl mx-auto md:py-10 lg:px-0 px-3 py-10'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <img alt="" className='max-w-[100%] mx-auto' src={ecosystemCta1}/>
@@ -39,7 +39,7 @@ const EcoSystem = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-10 md:px-0 px-3 py-10'>
+            <div className='max-w-5xl mx-auto md:py-10 lg:px-0 px-3 py-10'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <span class="text-[#17271F] max-w-[750px] mx-auto text-center mb-6 md:text-[42px] md:leading-[52px] text-[26px] leading-[34px] outfit-bold block">
@@ -51,7 +51,7 @@ const EcoSystem = () => {
             </div>
         </div>
         <div>
-            <div className='max-w-5xl mx-auto md:py-16 md:px-0 px-3 py-10'>
+            <div className='max-w-5xl mx-auto md:py-16 lg:px-0 px-3 py-10'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <span class="text-[#17271F] max-w-[750px] mx-auto text-center mb-8 md:text-[42px] md:leading-[52px] text-[26px] leading-[34px] outfit-bold block">
