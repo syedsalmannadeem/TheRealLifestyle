@@ -1,9 +1,12 @@
 import React,{ useEffect, useRef, useState } from 'react';
 import bgComingSoon from '../assets/images/bgcomingsoon.png'
 import homeBanner from '../assets/images/home-banner.png'
+import cloud1 from '../assets/images/cloud-1.png'
+import cloud2 from '../assets/images/cloud-2.png'
 import bgInvestIn from '../assets/images/bg-investin.png'
 import unlockFeature from '../assets/images/unlock-feature.png'
 import popBottom from '../assets/images/pop-bottom.png'
+import insightsGradient from '../assets/images/insights-gradient.png'
 import iconToken from '../assets/images/icon-tokenization.png'
 import iconEco from '../assets/images/icon-ecosystem.png'
 import featured1 from '../assets/images/featured-1.png'
@@ -12,9 +15,11 @@ import featured3 from '../assets/images/featured-3.png'
 import pillar1 from '../assets/images/pillar-1.png'
 import pillar2 from '../assets/images/pillar-2.png'
 import pillar3 from '../assets/images/pillar-3.png'
+import experienced1 from '../assets/images/experienced-1.png'
 import experienced2 from '../assets/images/experienced-2.png'
 import experienced3 from '../assets/images/experienced-3.png'
 import experienced4 from '../assets/images/experienced-4.png'
+import experienced5 from '../assets/images/experienced-5.png'
 import iconArrowRight from '../assets/images/icon-ar-right.png'
 import homeInvest from '../assets/images/home-invest.png'
 import homeLive from '../assets/images/home-live.png'
@@ -22,6 +27,8 @@ import clients1 from '../assets/images/clients-1.png'
 import clients2 from '../assets/images/clients-2.png'
 import clients3 from '../assets/images/clients-3.png'
 import clients4 from '../assets/images/clients-4.png'
+import iconPrev from '../assets/images/icon-previous.png'
+import iconNext from '../assets/images/icon-next.png'
 import bgUsp from '../assets/images/bgusp.png'
 import insights1 from '../assets/images/insights-1.png'
 import clientFace1 from '../assets/images/clientface-1.png'
@@ -38,41 +45,88 @@ import HeaderWhite from '../components/HeaderWhite';
 import Footer from '../components/Footer';
 import Topbar from '../components/Topbar';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Home = () => {
-  const sectionRef = useRef(null);
-  const [isInView, setIsInView] = useState(false);
+    const sectionRef = useRef(null);
+    const [isInView, setIsInView] = useState(false);
+    const carouselRef = useRef(null);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const section = sectionRef.current;
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const inView = rect.top >= 0 && rect.bottom <= window.innerHeight;
+          setIsInView(inView);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Initial check
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = sectionRef.current;
-      if (section) {
-        const rect = section.getBoundingClientRect();
-        const inView = rect.top >= 0 && rect.bottom <= window.innerHeight;
-        setIsInView(inView);
-      }
-    };
+    const handleNext = () => {
+        carouselRef.current?.next();
+      };
+    
+      const handlePrev = () => {
+        carouselRef.current?.prev();
+      };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+      useEffect(() => {
+        // Initialize AOS
+        AOS.init({
+          duration: 600,
+          delay: 100,
+        });
+    
+        const refreshAOS = () => {
+          AOS.refresh(); // Use refresh() instead of refreshHard()
+        };
+    
+        // Call AOS.refresh() on window scroll and resize events
+        window.addEventListener('scroll', refreshAOS);
+        window.addEventListener('resize', refreshAOS);
+    
+        // Optionally, force AOS refresh after a short delay
+        setTimeout(refreshAOS, 100);
+    
+        return () => {
+          window.removeEventListener('scroll', refreshAOS);
+          window.removeEventListener('resize', refreshAOS);
+        };
+      }, []);
+    
+      // This useEffect will refresh AOS on route changes if using React Router
+      useEffect(() => {
+        AOS.refresh();
+      }, [/* dependencies if any, e.g., navigation or content changes */]);
+  
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const text = "We are the world’s first 360 RWA ecosystem that drives the flywheel effect for both the consumer and investor when it comes to real estate living, tokenization, DeFi systems and utility rewards.";
+  
   return (
     <div>
         <Topbar/>
         <div className='md:py-2 mt-5 header-white'>
             <div className='max-w-[1400px] mx-auto lg:px-0 px-3'>
-                <div className='bg-no-repeat bg-cover md:rounded-[50px] lg:p-10 px-5 py-8 md:m-0 rounded-[12px] relative' style={{ backgroundImage: `url(${homeBanner})` }}>
+                <div className='bg-no-repeat bg-cover md:rounded-[50px] lg:p-10 px-5 py-8 md:m-0 rounded-[12px] relative overflow-clip' style={{ backgroundImage: `url(${homeBanner})` }}>
+                    <img alt="" className='absolute left-0 top-0' src={cloud1} data-aos='fade-right' data-aos-once="false"  data-aos-duration="1800" data-aos-offset="50" />
+                    <img alt="" className='absolute right-0 top-0' src={cloud2} data-aos='fade-left' data-aos-once="false"  data-aos-duration="1800" data-aos-offset="50" />
                     <img alt="" className='absolute bottom-0 left-0' src={popBottom}/>
-                    <div className='grid grid-cols-12 items-center'>
+                    <div className='grid grid-cols-12 items-center relative z-[1]'>
                         <HeaderWhite/>
                         <div className='col-span-12'>
                             <div className='md:h-[650px] h-[350px] flex flex-col items-center justify-center'>
-                                <span className='text-[#fff] md:text-[72px] text-[38px] leading-[42px] md:leading-[80px] outfit-bold block text-center'>The future of real estate <span className='md:block'>in onchain</span></span>    
-                                <p className='text-[#fff] text-center text-[20px] leading-[26px] mt-3'>Fully backed by Real World Assets, now everyone can own real estate with TRL.</p>
+                                <span className='text-[#fff] md:text-[72px] text-[38px] leading-[42px] md:leading-[80px] outfit-bold block text-center md:mb-5' data-aos='fade-up' data-aos-once="false" data-aos-duration="1800" data-aos-offset="200">The future of real estate <span className='md:block'>in onchain</span></span>    
+                                <p className='text-[#fff] text-center text-[20px] leading-[26px] mt-3' data-aos='fade-up' data-aos-duration="1800" data-aos-offset="200">Fully backed by Real World Assets, now everyone can own real estate with TRL.</p>
                             </div>
                         </div>
                         
@@ -80,16 +134,29 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pt-16 pt-5' ref={sectionRef} style={{
+        <div className='md:pt-16 pt-5 md:px-0 px-3' ref={sectionRef} style={{
         color: isInView ? '#FF4A3F' : '#FFEEED',
         transition: 'color 0.3s ease',
       }}>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
-                        <span className='md:text-[48px] text-[30px] outfit-bold  md:leading-[72px] text-center block max-w-[1000px] mx-auto'>
-                            We are the world’s first 360 RWA ecosystem that drives the flywheel effect for both the consumer and investor when it comes to real estate living, tokenization, DeFi systems and utility rewards.
-                        </span>
+                    <span className='md:text-[48px] text-[24px] leading-[35px] outfit-bold md:leading-[72px] text-center block max-w-[1000px] mx-auto'>
+                    {text.split('').map((letter, index) => (
+                <span
+                  key={index}
+                  className={`letter ${
+                    isInView ? 'letter-visible' : ''
+                  }`}
+                  style={{
+                    transition: `color 0.3s ease ${index * 0.01}s`,
+                  }}
+                >
+                  {/* Render a non-breaking space for actual spaces */}
+                  {letter === ' ' ? '\u00A0' : letter}
+                </span>
+              ))}
+            </span>
                     </div>
                 </div>
             </div>
@@ -107,8 +174,9 @@ const Home = () => {
                         dots={false}
                         items={5.2}
                         autoplay
-                        autoplayTimeout={3000}
+                        autoplayTimeout={1000}
                         autoplayHoverPause
+                        smartSpeed={1000}
                         responsive={{
                             0: {
                             items: 1.3,
@@ -121,6 +189,206 @@ const Home = () => {
                             },
                         }}
                     >
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients1}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients2}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-0' src={clients3}/>
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div>
+                            <img alt="" className='md:mt-24' src={clients4}/>
+                        </div>
+                    </div>
                     <div className="item">
                         <div>
                             <img alt="" className='md:mt-0' src={clients1}/>
@@ -189,7 +457,7 @@ const Home = () => {
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12 items-center md:gap-x-10'>
                     <div className='col-span-12 text-center'>
-                        <span className='text-[#17271F] text-[32px] md:leading-[52px] leading-[35px] md:mb-0 mb-2 md:text-[48px] outfit-bold block'>Unlock real world value with $TRLCO</span>
+                        <span className='text-[#17271F] text-[32px] md:leading-[52px] leading-[35px] md:mb-5 mb-5 md:text-[48px] outfit-bold block'>Unlock real world value with $TRLCO</span>
                         <span className='text-[#565656] text-[16px] outfit-regular max-w-[600px] mx-auto block'>
                             $TRLCO is the main utility token powering the TRL 360 ecosystem.
                             Earn and redeem $TRLCO for lifestyle privileges like dining and experiences.
@@ -202,10 +470,12 @@ const Home = () => {
                         center
                         margin={30}
                         nav={false}
+                        dots={false}
                         items={5.2}
                         autoplay
-                        autoplayTimeout={3000}
+                        autoplayTimeout={1000}
                         autoplayHoverPause
+                        smartSpeed={1000}
                         responsive={{
                             0: {
                             items: 1.5,
@@ -379,21 +649,51 @@ const Home = () => {
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
-                        <span className='text-[#17271F] md:text-[32px] text-[26px] md:leading-[36px] leading-[29px] md:mb-0 mb-3 outfit-semibold block'>Backed by experienced Web 2 and Web 3 experts</span>
+                        <span className='text-[#17271F] md:text-[32px] text-[26px] md:leading-[36px] leading-[29px] md:mb-3 mb-3 outfit-semibold block'>Backed by experienced Web 2 and Web 3 experts</span>
                         <span className='text-[#565656] text-[16px] outfit-regular'>Our team has decades of leadership experience at market leaders in the blockchain, real estate, financial services, and gaming sectors.</span>
                     </div>
-                    <div className='col-span-12 text-center'>
-                        <ul className='flex flex-row items-center justify-center w-full mt-8 gap-x-5'>
-                            <li>
-                                <img alt="" src={experienced2} />
-                            </li>
-                            <li>
-                                <img alt="" src={experienced3} />
-                            </li>
-                            <li>
-                                <img alt="" src={experienced4} />
-                            </li>
-                        </ul>
+                    <div className='col-span-2 md:block hidden'></div>
+                    <div className='md:col-span-8 md:mt-5 col-span-12 text-center'>
+                    <OwlCarousel
+                        className="owl-theme owl-clients"
+                        loop
+                        center
+                        margin={10}
+                        nav={false}
+                        dots={false}
+                        items={5.2}
+                        autoplay
+                        autoplayTimeout={1000}
+                        autoplayHoverPause
+                        smartSpeed={1000}
+                        responsive={{
+                            0: {
+                            items: 1.5,
+                            },
+                            600: {
+                            items: 3,
+                            },
+                            1000: {
+                            items: 5,
+                            },
+                        }}
+                    >
+                            <div className='item justify-center'>
+                                <img alt="" className='max-w-[120px]' src={experienced1} />
+                            </div>
+                            <div className='item justify-center'>
+                                <img alt="" className='max-w-[120px]' src={experienced2} />
+                            </div>
+                            <div className='item justify-center'>
+                                <img alt="" className='max-w-[120px]' src={experienced3} />
+                            </div>
+                            <div className='item justify-center'>
+                                <img alt="" className='max-w-[120px]' src={experienced4} />
+                            </div>
+                            <div className='item justify-center'>
+                                <img alt="" className='max-w-[120px]' src={experienced5} />
+                            </div>
+                        </OwlCarousel>
                     </div>
                     <div className='col-span-12 text-center mt-8'>
                         <button className='text-[#fff] bg-[#FF4A3F] text-[16px] outfit-semibold md:px-6 py-2 px-5 rounded-[25px]'>Invest Now</button>
@@ -407,8 +707,11 @@ const Home = () => {
                     <div className='col-span-12 text-center'>
                         <span className='text-[#17271F] md:text-[48px] md:leading-[52px] text-[30px] leading-[34px] outfit-bold block'>Insights from the team</span>
                     </div>
-                    <div className='col-span-12'>
-                    <OwlCarousel
+                    <div className='col-span-12 relative'>
+                        <img src={insightsGradient} className='md:block hidden absolute left-0 top-0 h-full w-full z-[2]' alt=""/>
+                        <img src={iconPrev} onClick={handlePrev} className='absolute left-0 md:left-[50px] cursor-pointer z-[3] md:top-[50%] md:translate-y-[-50%] md:block hidden' alt=""/>
+                        <img src={iconNext} onClick={handleNext} className='absolute right-0 md:right-[50px] cursor-pointer z-[3] md:top-[50%] md:translate-y-[-50%] md:block hidden' alt=""/>
+                    <OwlCarousel ref={carouselRef}
                         className="owl-theme"
                         loop
                         center={true}
@@ -416,18 +719,15 @@ const Home = () => {
                         nav={false}
                         dots={false}
                         items={5.2}
-                        autoplay
-                        autoplayTimeout={3000}
-                        autoplayHoverPause
                         responsive={{
                             0: {
                             items: 1,
                             },
                             600: {
-                            items: 1.5,
+                            items: 1,
                             },
                             1000: {
-                            items: 1.5,
+                            items: 1.3,
                             },
                         }}
                     >
@@ -437,12 +737,12 @@ const Home = () => {
                                 <img alt="" className='md:mb-0 mb-4' src={insights1}/>
                             </div>
                             <div className='md:col-span-8 col-span-12'>
-                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
-                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[440px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:text-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
                                     <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
                                     <div className='grid grid-cols-12'>
                                         <div className='md:col-span-5 col-span-9'>
-                                            <div className='flex flex-row items-center gap-x-2'>
+                                            <div className='flex flex-row items-center gap-x-2 md:mt-0 mt-4'>
                                                 <div>
                                                     <img alt="" src={clientFace1}/>
                                                 </div>
@@ -463,12 +763,12 @@ const Home = () => {
                                 <img alt="" className='md:mb-0 mb-4' src={insights1}/>
                             </div>
                             <div className='md:col-span-8 col-span-12'>
-                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
-                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[440px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:text-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
                                     <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
                                     <div className='grid grid-cols-12'>
                                         <div className='md:col-span-5 col-span-9'>
-                                            <div className='flex flex-row items-center gap-x-2'>
+                                            <div className='flex flex-row items-center gap-x-2 md:mt-0 mt-4'>
                                                 <div>
                                                     <img alt="" src={clientFace1}/>
                                                 </div>
@@ -489,12 +789,12 @@ const Home = () => {
                                 <img alt="" className='md:mb-0 mb-4' src={insights1}/>
                             </div>
                             <div className='md:col-span-8 col-span-12'>
-                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
-                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[440px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:text-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
                                     <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
                                     <div className='grid grid-cols-12'>
                                         <div className='md:col-span-5 col-span-9'>
-                                            <div className='flex flex-row items-center gap-x-2'>
+                                            <div className='flex flex-row items-center gap-x-2 md:mt-0 mt-4'>
                                                 <div>
                                                     <img alt="" src={clientFace1}/>
                                                 </div>
@@ -515,12 +815,12 @@ const Home = () => {
                                 <img alt="" className='md:mb-0 mb-4' src={insights1}/>
                             </div>
                             <div className='md:col-span-8 col-span-12'>
-                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
-                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[440px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:text-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
                                     <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
                                     <div className='grid grid-cols-12'>
                                         <div className='md:col-span-5 col-span-9'>
-                                            <div className='flex flex-row items-center gap-x-2'>
+                                            <div className='flex flex-row items-center gap-x-2 md:mt-0 mt-4'>
                                                 <div>
                                                     <img alt="" src={clientFace1}/>
                                                 </div>
@@ -541,12 +841,12 @@ const Home = () => {
                                 <img alt="" className='md:mb-0 mb-4' src={insights1}/>
                             </div>
                             <div className='md:col-span-8 col-span-12'>
-                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[390px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
-                                    <p className='md:ext-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
+                                <div className='md:m-4 md:p-10 p-6 bg-cover bg-no-repeat md:h-[440px] h-[280px] max-w-full md:max-w-[94%] relative flex flex-col justify-between' style={{ backgroundImage: `url(${bgTestimonials})` }}>
+                                    <p className='md:text-[20px]'>Lorem ipsum dolor sit amet consectetur. Nunc accumsan tellus lectus dui molestie aliquet in. Pretium nullam vehicula eget mi fermentum nunc tincidunt. Enim viverra aliquam ut massa vitae adipiscing consequat in sed. Interdum at gravida vel tortor habitant cras augue euismod.</p>
                                     <img alt="" className='md:max-w-[100px] max-w-[50px] absolute md:right-[38px] right-[0px] md:bottom-0 bottom-[20px]' src={insightsQuote}/>
                                     <div className='grid grid-cols-12'>
                                         <div className='md:col-span-5 col-span-9'>
-                                            <div className='flex flex-row items-center gap-x-2'>
+                                            <div className='flex flex-row items-center gap-x-2 md:mt-0 mt-4'>
                                                 <div>
                                                     <img alt="" src={clientFace1}/>
                                                 </div>
@@ -569,9 +869,9 @@ const Home = () => {
         <div className="bg-no-repeat bg-cover lg:px-0 px-3 lg:py-0 pb-6 pt-6" style={{ backgroundImage: `url(${bgComingSoon})` }}>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-12 items-center">
-                    <div className="md:col-span-6 col-span-12">
+                    <div className="md:col-span-6 col-span-12 lg:py-0 py-0">
                         <span className='block md:text-[30px] md:leading-[40px] text-[22px] orange-text outfit-bold mb-2'>Coming Soon</span>
-                        <span className='block md:text-[48px] text-[38px] md:leading-[52px] leading-[42px] outfit-bold mb-6 md:mb-6 max-w-[480px]'>
+                        <span className='block md:text-[48px] text-[30px] md:leading-[52px] leading-[36px] outfit-bold mb-6 md:mb-6 max-w-[480px]'>
                             Unlock the future of real estate with TRL Marketplace
                         </span>
                         <ul>
@@ -613,18 +913,22 @@ const Home = () => {
             <div className='max-w-7xl mx-auto md:py-24 lg:px-0 px-3 py-10'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
-                        <img alt="" className='max-w-[100%] mx-auto' src={bgInvestIn}/>
+                        <div className='relative'>
+                            <span className="lg:w-[65%] cursor-pointer text-center orange-text3 lg:text-[92px] md:text-[60px] md:w-[65%] w-[80%] text-[30px] absolute left-[50%] top-[50%] block translate-x-[-50%] translate-y-[-50%] outfit-bold">Invest in $TRLX1 &#10548;</span>
+                            <img alt="" className='max-w-[100%] mx-auto' src={bgInvestIn}/>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-        <div className='lg:px-0 px-3'>
+        <div className='lg:px-0 px-3 md:pb-0 pb-10'>
             <div className='max-w-7xl mx-auto md:py-6'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
-                        <ul className='flex flex-row items-center justify-center md:gap-x-5 gap-x-1'>
+                        <ul className='flex md:flex-row flex-col items-center justify-center md:gap-x-5 gap-x-1 md:gap-y-0 gap-y-2'>
                             <li>
-                                <span className='text-[#565656] md:text-[16px] text-[13px] outfit-regular md:inline'>Proudly featured in</span>
+                                <span className='text-[#565656] md:text-[16px] text-[22px] outfit-regular md:inline mb-4'>Proudly featured in</span>
                             </li>
                             <li>
                                 <img alt="" src={featured1}/>
