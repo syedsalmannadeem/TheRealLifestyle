@@ -22,7 +22,7 @@ const Header = () => {
                         </div>
                         <div className='col-span-7'>
                             <div className="relative group inline mr-4">
-                                <a className="px-1" href="e-commerce">
+                                <a className="px-1" href="#">
                                     <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Investments
                                     </span>
@@ -55,7 +55,7 @@ const Header = () => {
 
                             </div>
                             <div className="relative group inline mr-4">
-                                <a className="px-1" href="e-commerce">
+                                <a className="px-1" href="#">
                                     <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Token Ecosystem
                                     </span>
@@ -95,7 +95,7 @@ const Header = () => {
 
                             </div>
                             <div className="relative group inline mr-4">
-                                <a className="px-1" href="e-commerce">
+                                <a className="px-1" href="#">
                                     <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Learn
                                     </span>
@@ -135,7 +135,7 @@ const Header = () => {
 
                             </div>
                             <div className="relative group inline mr-4">
-                                <a className="px-1" href="e-commerce">
+                                <a className="px-1" href="#">
                                     <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Company
                                     </span>
