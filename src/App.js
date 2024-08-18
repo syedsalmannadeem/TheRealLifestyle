@@ -35,7 +35,7 @@ function App() {
           <Route path="/invest" element={<Invest />} />
           <Route path="/live" element={<Live />} />
           <Route path="/media" element={<Media />} />
-          <Route path="/media-details" element={<MediaDetails />} />
+          <Route path="/media-details/:id" element={<MediaDetails />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/roadmap" element={<RoadMap />} />
           <Route path="*" element={<NotFound />} />
