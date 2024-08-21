@@ -47,8 +47,6 @@ import Topbar from '../components/Topbar';
 import investbgNew from '../assets/images/invest-bg-new.png'
 import livebgNew from '../assets/images/live-bg-new.png'
 
-import marqueeInvestor from '../assets/images/marquee-investor.png'
-import marqueeLive from '../assets/images/marquee-live.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

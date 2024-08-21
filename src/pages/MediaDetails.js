@@ -5,7 +5,6 @@ import { PortableText } from '@portabletext/react';
 import Topbar from '../components/Topbar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import sliderImage from '../assets/images/slider-stats.png';
 import iconDownloads from '../assets/images/icon-downloads.png';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
@@ -60,8 +59,8 @@ const MediaDetails = () => {
     fetchPost();
   }, [id]);
 
-  // if (error) return <div>Error: {error.message}</div>;
-  // if (!post) return <div>Loading or no post found...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!post) return <div>Loading or no post found...</div>;
 
   return (
     <div>
