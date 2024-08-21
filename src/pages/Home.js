@@ -53,6 +53,8 @@ const Home = () => {
     const sectionRef = useRef(null);
     const [isInView, setIsInView] = useState(false);
     const carouselRef = useRef(null);
+
+    const [isOpen, setIsOpen] = useState(false);
   
     useEffect(() => {
       const handleScroll = () => {
@@ -516,12 +518,12 @@ const Home = () => {
                     <div className='md:col-span-7 col-span-12'>
                         <h5 className='text-[28px] outfit-semibold md:mb-8 mb-4 md:mt-0 mt-4'>How this works</h5>
                     <Accordion >
-                        <Accordion.Panel>
-                            <Accordion.Title>
+                        <Accordion.Panel className='mb-4'>
+                            <Accordion.Title className='transition-opacity duration-800 animate-fadeIn'>
                                 <span className='md:text-[30px] text-[24px] mb-4 outfit-bold'>Earn & redeem</span>
                             </Accordion.Title>
-                            <Accordion.Content>
-                            <div className='flex flex-row gap-x-2 mb-2 mt-4'>
+                            <Accordion.Content className='transition-opacity duration-800 animate-fadeIn'>
+                            <div className='flex flex-row gap-x-2 mb-2 mt-0'>
                                 <div>
                                     <img alt="" className='min-w-[30px]' src={iconEarn}/>
                                 </div>
@@ -539,12 +541,12 @@ const Home = () => {
                             </div>
                             </Accordion.Content>
                         </Accordion.Panel>
-                        <Accordion.Panel>
-                            <Accordion.Title>
+                        <Accordion.Panel className='mb-4'>
+                            <Accordion.Title className='transition-opacity duration-800 animate-fadeIn'>
                                 <span className='md:text-[30px] text-[24px] mb-4 outfit-bold mt-5'>Utility & access</span>
                             </Accordion.Title>
-                            <Accordion.Content>
-                            <div className='flex flex-row gap-x-2 mb-2 mt-4'>
+                            <Accordion.Content  className="animate-fadeIn">
+                            <div className='flex flex-row gap-x-2 mb-2 mt-0'>
                                 <div>
                                     <img alt="" className='min-w-[30px]' src={iconEarn}/>
                                 </div>
@@ -562,12 +564,12 @@ const Home = () => {
                             </div>
                             </Accordion.Content>
                         </Accordion.Panel>
-                        <Accordion.Panel>
-                            <Accordion.Title>
+                        <Accordion.Panel className='mb-4'>
+                            <Accordion.Title className='transition-opacity duration-800 animate-fadeIn'>
                                 <span className='md:text-[30px] text-[24px] mb-4 outfit-bold'>Community benefits</span>
                             </Accordion.Title>
-                            <Accordion.Content>
-                            <div className='flex flex-row gap-x-2 mb-2 mt-4'>
+                            <Accordion.Content  className="animate-fadeIn">
+                            <div className='flex flex-row gap-x-2 mb-2 mt-0'>
                                 <div>
                                     <img alt="" className='min-w-[30px]' src={iconEarn}/>
                                 </div>
@@ -870,7 +872,7 @@ const Home = () => {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-12 items-center">
                     <div className="md:col-span-6 col-span-12 lg:py-0 py-0">
-                        <span className='block md:text-[30px] md:leading-[40px] text-[22px] orange-text outfit-bold mb-2'>Coming Soon</span>
+                        <span className='block md:text-[30px] md:leading-[40px] text-[22px] orange-text3 outfit-bold mb-2'>Coming Soon</span>
                         <span className='block md:text-[48px] text-[30px] md:leading-[52px] leading-[36px] outfit-bold mb-6 md:mb-6 max-w-[480px]'>
                             Unlock the future of real estate with TRL Marketplace
                         </span>
