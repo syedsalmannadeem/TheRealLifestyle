@@ -44,6 +44,11 @@ import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 import HeaderWhite from '../components/HeaderWhite';
 import Footer from '../components/Footer';
 import Topbar from '../components/Topbar';
+import investbgNew from '../assets/images/invest-bg-new.png'
+import livebgNew from '../assets/images/live-bg-new.png'
+
+import marqueeInvestor from '../assets/images/marquee-investor.png'
+import marqueeLive from '../assets/images/marquee-live.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -55,6 +60,36 @@ const Home = () => {
     const carouselRef = useRef(null);
 
     const [isOpen, setIsOpen] = useState(false);
+
+    const [leftWidth, setLeftWidth] = useState(50);
+  const [rightWidth, setRightWidth] = useState(50);
+
+  const expandLeft = () => {
+    setLeftWidth(95);
+    setRightWidth(5);
+  };
+
+  const expandRight = () => {
+    setLeftWidth(5);
+    setRightWidth(95);
+  };
+
+  const handleHoverLeft = () => {
+    setLeftWidth(65);
+    setRightWidth(35);
+  };
+
+  const handleHoverRight = () => {
+    setLeftWidth(35);
+    setRightWidth(65);
+  };
+
+  const handleMouseLeave = () => {
+    if (leftWidth !== 95 && rightWidth !== 95) {
+      setLeftWidth(50);
+      setRightWidth(50);
+    }
+  };
   
     useEffect(() => {
       const handleScroll = () => {
@@ -417,7 +452,7 @@ const Home = () => {
             </div>
         </div>
         <div className='md:pb-16 pb-10 md:pt-0 pt-5 overflow-x-clip'>
-            <div className='max-w-[1600px] mx-auto'>
+            <div className='max-w-[1600px] mx-auto md:hidden block'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
                         <span className='orange-text2 mb-3 md:text-[72px] text-[34px] outfit-bold block'>
@@ -451,6 +486,105 @@ const Home = () => {
                                 <img alt="" className='lg:mt-24 mt-8' src={iconArrowRight} />
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className='max-w-[1500px] md:block hidden mx-auto'>
+                <div className='grid grid-cols-12'>
+                    <div className='col-span-12 text-center'>
+                        <span className='orange-text2 mb-3 md:text-[72px] text-[34px] outfit-bold block'>
+                            The TRL Ecosystem
+                        </span>
+                    </div>
+                </div>
+                <div className="container">
+                    
+                    <div
+                    className="left-section"
+                    style={{
+                        width: `${leftWidth}%`,
+                        borderTopRightRadius: '0px',
+                        borderBottomRightRadius: '0px',
+                        transition: 'width 0.3s ease',
+                    }}
+                    onClick={expandLeft}
+                    onMouseEnter={handleHoverLeft}
+                    onMouseLeave={handleMouseLeave}
+                    >
+                    <img src={investbgNew} className={`absolute left-0 top-0 min-w-[1300px] opacity-[0.5] object-cover ${leftWidth === 5 ? '' : ''}`} alt=""/>
+                    <img src={iconArrowRight} className={`absolute left-[20px] top-[50%] ${
+                            leftWidth === 5 ? 'block' : 'hidden'
+                        }`}/>
+
+
+
+<div className={`ticker-content absolute moving-image py-2 outfit-bold left-0px bottom-[0px] ${
+                            leftWidth === 5 ? '' : 'block'
+                        }`} >
+    <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR 
+  </div>
+
+
+                    <div className="absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-40%] z-[99] max-w-[420px] lg:min-w-[420px] md:min-w[300px]">
+                        <span
+                        className={`block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[38px] outfit-bold lg:leading-[40px] ${
+                            leftWidth === 5 ? 'hidden' : 'block'
+                        }`}
+                        >
+                        Invest in properties globally without getting locked in (or out)
+                        </span>
+                        <span
+                        className={`block mt-4 md:mt-8 text-[#fff] text-[14px] leading-[20px] outfit-regular ${
+                            leftWidth === 5 ? 'hidden' : 'block'
+                        }`}
+                        >
+                        Buy a fraction of a portfolio of properties, earn instant real-time yields, and trade easily in our highly liquid marketplace.
+                        </span>
+                        <img alt="" className="lg:mt-16 mt-8 cursor-pointer" src={iconArrowRight} />
+                    </div>
+                    </div>
+                    <div
+                    className="right-section"
+                    style={{
+                        width: `${rightWidth}%`,
+                        borderTopLeftRadius: '0px',
+                        borderBottomLeftRadius: '0px',
+                        transition: 'width 0.3s ease',
+                    }}
+                    onClick={expandRight}
+                    onMouseEnter={handleHoverRight}
+                    onMouseLeave={handleMouseLeave}
+                    >
+                    <img src={livebgNew} className='absolute left-0 top-0 min-w-[1200px] opacity-[0.5]' alt=""/>
+                    <div className={`ticker-content2 absolute moving-image py-2 outfit-bold left-0px bottom-[0px] ${
+                            leftWidth === 5 ? '' : 'block'
+                        }`} >
+    <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER 
+  </div>
+                    <img src={iconArrowRight} className={`absolute left-[20px] rotate-180 top-[50%] ${
+                            rightWidth === 5 ? 'block' : 'hidden'
+                        }`}/>
+                    <div className="absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-35%] z-[1] max-w-[420px] lg:min-w-[420px] md:min-w[300px]">
+                        <span
+                        className={`block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[38px] outfit-bold lg:leading-[40px] ${
+                            rightWidth === 5 ? 'hidden' : 'block'
+                        }`}
+                        >
+                        Experience global living without boundaries
+                        </span>
+                        <span
+                        className={`block mt-4 md:mt-8 text-[#fff] text-[14px] leading-[20px] outfit-regular ${
+                            rightWidth === 5 ? 'hidden' : 'block'
+                        }`}
+                        >
+                        Live flexibly anywhere in the world with our pioneering home subscription service and seamless access to global rental and home ownership opportunities.
+                        </span>
+                        <img alt=""
+                        className={`lg:mt-24 mt-8 cursor-pointer ${
+                        rightWidth === 5 ? 'rotate-180' : 'rotate-0'
+                        }`}
+                        src={iconArrowRight} />
+                    </div>
                     </div>
                 </div>
             </div>

@@ -60,8 +60,8 @@ const MediaDetails = () => {
     fetchPost();
   }, [id]);
 
-  if (error) return <div>Error: {error.message}</div>;
-  if (!post) return <div>Loading or no post found...</div>;
+  // if (error) return <div>Error: {error.message}</div>;
+  // if (!post) return <div>Loading or no post found...</div>;
 
   return (
     <div>

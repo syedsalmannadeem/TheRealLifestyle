@@ -11,7 +11,7 @@ import Media from './pages/Media';
 import MediaDetails from './pages/MediaDetails';
 import Partners from './pages/Partners';
 import RoadMap from './pages/Roadmap';
-import NotFound from './pages/Roadmap';
+import NotFound from './pages/NotFound';
 
 
 

@@ -38,18 +38,21 @@ const RoadMap = () => {
             <div className='max-w-7xl mx-auto mt-10'>
               <div className='grid grid-cols-12'>
                 <div className='md:col-span-4 col-span-12'>
-                  <span className='block md:text-[90px] text-[50px] leading-[55px] text-[#FF4A3F] outfit-bold md:leading-[100px] md:mt-10'>Q1 <span className='block'>2024</span></span>
+                  
                   <div className="custom-nav mt-5">
-                    <button onClick={goToPrevSlide} className="custom-prev mr-3">
-                      <img src={iconPrev} alt=""/>
-                    </button>
-                    <button onClick={goToNextSlide} className="custom-next">
-                      <img src={iconNext} alt=""/>
-                    </button>
+                    
                   </div>
                 </div>
-                <div className='md:col-span-7 col-span-12 relative'>
+                <div className='md:col-span-12 col-span-12 relative'>
                   <span className='absolute right-0 top-0 h-full bg-[#fff]/80 z-[2] w-[10%] md:block hidden'></span>
+                  <div className='absolute md:left-0 right-0 top-[-20px] md:top-[280px] z-[999999]'>
+                    <button onClick={goToPrevSlide} className="custom-prev mr-3">
+                        <img src={iconPrev} alt=""/>
+                      </button>
+                      <button onClick={goToNextSlide} className="custom-next">
+                        <img src={iconNext} alt=""/>
+                      </button>
+                  </div>
                 <OwlCarousel ref={carouselRef}
                         className="owl-theme"
                         loop
@@ -67,11 +70,17 @@ const RoadMap = () => {
                             items: 1.2,
                             },
                             1000: {
-                            items: 1.2,
+                            items: 1.1,
                             },
                         }}
                     >
                         <div className='item md:m-0 m-[12px]'>
+                          <div className='grid grid-cols-12'>
+                            <div className='md:col-span-5 col-span-12'>
+                              <span className='block md:text-[90px] text-[50px] leading-[55px] text-[#FF4A3F] outfit-bold md:leading-[100px] md:mt-10'>Q1 <span className='block'>2024</span></span>
+                            </div>
+                            <div className='md:col-span-7 col-span-12'>
+
                             <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
@@ -93,8 +102,17 @@ const RoadMap = () => {
                                   <li className='text-[#8A8A8A]'>⁠Commencement of Advisory Incubation </li>
                                 </ul>
                             </div>
+
+                            </div>
+                          </div>
                         </div>
                         <div className='item md:m-0 m-[12px]'>
+                          <div className='grid grid-cols-12'>
+                            <div className='md:col-span-5 col-span-12'>
+                              <span className='block md:text-[90px] text-[50px] leading-[55px] text-[#FF4A3F] outfit-bold md:leading-[100px] md:mt-10'>Q2 <span className='block'>2024</span></span>
+                            </div>
+                            <div className='md:col-span-7 col-span-12'>
+
                             <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
@@ -116,8 +134,17 @@ const RoadMap = () => {
                                   <li className='text-[#8A8A8A]'>⁠Commencement of Advisory Incubation </li>
                                 </ul>
                             </div>
+
+                            </div>
+                          </div>
                         </div>
                         <div className='item md:m-0 m-[12px]'>
+                          <div className='grid grid-cols-12'>
+                            <div className='md:col-span-5 col-span-12'>
+                              <span className='block md:text-[90px] text-[50px] leading-[55px] text-[#FF4A3F] outfit-bold md:leading-[100px] md:mt-10'>Q3 <span className='block'>2024</span></span>
+                            </div>
+                            <div className='md:col-span-7 col-span-12'>
+
                             <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
@@ -139,6 +166,9 @@ const RoadMap = () => {
                                   <li className='text-[#8A8A8A]'>⁠Commencement of Advisory Incubation </li>
                                 </ul>
                             </div>
+
+                            </div>
+                          </div>
                         </div>
                         </OwlCarousel>
                 </div>
