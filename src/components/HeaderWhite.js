@@ -173,6 +173,11 @@ const HeaderWhite = () => {
                                 </div>
 
                             </div>
+                            <a className="px-1" href="/contact">
+                                    <span className="outfit-medium text-[#FFFFFF] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                                        Contact
+                                    </span>
+                                </a>
                             
 
                         </div>

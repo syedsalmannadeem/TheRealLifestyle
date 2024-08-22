@@ -174,6 +174,11 @@ const Header = () => {
                                 </div>
 
                             </div>
+                            <a className="px-1" href="/contact">
+                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                                        Contact
+                                    </span>
+                                </a>
                             
 
                         </div>

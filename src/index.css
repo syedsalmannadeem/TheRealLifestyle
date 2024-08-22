@@ -185,6 +185,7 @@ body {
 }
 button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\:rounded-t-lg.last\:rounded-b-lg.hover\:bg-gray-100.focus\:ring-4.focus\:ring-gray-200.dark\:hover\:bg-gray-800.dark\:focus\:ring-gray-800.bg-gray-100.text-gray-900.dark\:bg-gray-800.dark\:text-white {
   background: none !important;
+  padding: 10px;
 }
 .divide-y.divide-gray-200.border-gray-200.dark\:divide-gray-700.dark\:border-gray-700.rounded-lg.border {
   border: none !important;
@@ -192,7 +193,9 @@ button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\
 button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.text-gray-500.first\:rounded-t-lg.last\:rounded-b-lg.dark\:text-gray-400.hover\:bg-gray-100.focus\:ring-4.focus\:ring-gray-200.dark\:hover\:bg-gray-800.dark\:focus\:ring-gray-800 {
   margin-top: 15px;
   margin-bottom: 15px;
-  color: #cfcccc;
+  color: #000;
+  padding: 10px;
+  border-bottom: 1px solid #e2e2e2;
 }
 button:focus{
   outline: none;
@@ -233,6 +236,12 @@ button:focus{
 [data-testid="flowbite-accordion-content"] {
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 5px
+}
+
+[data-testid="flowbite-accordion"] p {
+  font-size: 15px;
+  margin-top: 0px;
 }
 
 button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\:rounded-t-lg.last\:rounded-b-lg.hover\:bg-gray-100.focus\:ring-4.focus\:ring-gray-200.dark\:hover\:bg-gray-800.dark\:focus\:ring-gray-800.bg-gray-100.text-gray-900.dark\:bg-gray-800.dark\:text-white h2 {
@@ -500,7 +509,7 @@ nav button span.sr-only {
 
 .ticker-content {
   display: inline-block;
-  background: #FDC2A3;
+  background: #fdccb2;
   box-shadow: 0 0 black;
   animation: ticker 35s linear infinite;
   font-size: 20px;
@@ -511,7 +520,7 @@ nav button span.sr-only {
 
 .ticker-content2 {
   display: inline-block;
-  background: #8AB6C4;
+  background: #bdd8e0;
   box-shadow: 0 0 black;
   animation: ticker 35s linear infinite;
   font-size: 20px;

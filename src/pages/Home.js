@@ -459,6 +459,7 @@ const Home = () => {
                     </div>
                     <div className='md:col-span-6 col-span-12 mr-[-60px]'>
                         <div className='relative lg:min-h-[600px]'>
+                        
                             <img alt="" src={homeInvest} className='h-full w-full relative z-[9]' />
                             <div className='absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-40%] z-[99] max-w-[60%]'>
                                 <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[55px] outfit-bold lg:leading-[66px]'>
@@ -467,12 +468,17 @@ const Home = () => {
                                 <span className='block mt-4 md:mt-8 text-[#fff] text-[17px] leading-[24px] outfit-regular'>
                                     Buy a fraction of a portfolio of properties, earn instant real-time yields, and trade easily in our highly liquid marketplace.
                                 </span>
-                                <img alt="" className='lg:mt-24 mt-8' src={iconArrowRight} />
+                                <img alt="" className='lg:mt-24 mt-5 md:w-auto w-[25px]' src={iconArrowRight} />
+                            </div>
+                            <div className='bg-[#fdccb2]'>
+                                <div className="ticker-content py-2 outfit-bold">
+                                    <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR <span className='w-[50px] px-10 inline-block'></span> FOR INVESTOR 
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className='md:col-span-6 col-span-12 lg:ml-[-15px]'>
-                        <div className='relative lg:min-h-[612px] md:min-h-[400px]'>
+                        <div className='relative lg:min-h-[612px] md:min-h-[600px]'>
                             <img alt="" src={homeLive} className='h-full w-full relative z-[-1]' />
                             <div className='absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-35%] z-[1] max-w-[60%]'>
                                 <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[55px] outfit-bold lg:leading-[66px]'>
@@ -481,7 +487,12 @@ const Home = () => {
                                 <span className='block mt-4 md:mt-8 text-[#fff] text-[17px] leading-[24px] outfit-regular'>
                                     Live flexibly anywhere in the world with our pioneering home subscription service and seamless access to global rental and home ownership opportunities.
                                 </span>
-                                <img alt="" className='lg:mt-24 mt-8' src={iconArrowRight} />
+                                <img alt="" className='lg:mt-24 mt-5 md:w-auto w-[25px]' src={iconArrowRight} />
+                            </div>
+                            <div className='bg-[#bdd8e0]'>
+                                <div className="ticker-content2 py-2 outfit-bold">
+                                    <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER <span className='w-[50px] px-10 inline-block'></span> FOR CONSUMER 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -754,22 +765,22 @@ const Home = () => {
                         }}
                     >
                         <div className='item'>
-                            <div className='max-w-[80%] mx-auto relative md:h-[380px]'>
-                                <img alt="" className='absolute z-[-1] right-[-20px]' src={pillar1}/>
+                            <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
+                                <img alt="" className='absolute z-[-1] md:right-[-20px] left-0 md:w-auto w-full' src={pillar1}/>
                                 <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>seamless</span></h5>
                                 <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5'>Our streamlined procedures make these processes transparent, flexible, secure, and affordable. We believe that simplicity is the key to enjoying life’s greatest pleasures.</p>
                             </div>
                         </div>
                         <div className='item'>
-                            <div className='max-w-[80%] mx-auto relative md:h-[380px]'>
-                                <img alt="" className='absolute z-[-1] right-[-20px]' src={pillar2}/>
+                            <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
+                                <img alt="" className='absolute z-[-1] md:right-[-20px] left-0 md:w-auto w-full' src={pillar2}/>
                                 <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>accessible</span></h5>
                                 <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5'>Our goal is to provide choices that empower you to shape your living situation according to your desires, whether you prefer traditional home ownership or flexible rental arrangements.</p>
                             </div>
                         </div>
                         <div className='item'>
-                            <div className='max-w-[80%] mx-auto relative md:h-[380px]'>
-                                <img alt="" className='absolute z-[-1] right-[-20px]' src={pillar3}/>
+                            <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
+                                <img alt="" className='absolute z-[-1] md:right-[-20px] left-0 md:w-auto w-full' src={pillar3}/>
                                 <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>borderless</span></h5>
                                 <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5'>Our services and solutions support a modern lifestyle, allowing you to seamlessly transition between different aspects of your life, no matter where you are.</p>
                             </div>

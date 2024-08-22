@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import FaqBanner from '../assets/images/faq-hero.png';
 import Topbar from '../components/Topbar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Tabs, Accordion } from "flowbite-react";
+import { Tabs } from "flowbite-react";
+import { Accordion } from "flowbite-react";
 
 const Faq = () => {
   const [sections, setSections] = useState([]);
   const [articles, setArticles] = useState([]);
   const [activeSectionId, setActiveSectionId] = useState(null);
-  const tabsRef = useRef(null);
 
   // Fetch sections
   useEffect(() => {
-    fetch('https://thereallifestyle.zendesk.com/api/v2/help_center/categories/36562854739481/sections.json', {
+    fetch('https://wepsolhelp.zendesk.com/api/v2/help_center/categories/27719012849297/sections.json', {
       method: 'GET',
       headers: {
-        'Authorization': 'Basic ' + btoa('yenray.ng@trlco.world/token:O4N6Fysz582712RvT2Aux2gvbdabCExJOoh966nK')
+        'Authorization': 'Basic ' + btoa('shawnmichael78690@gmail.com/token:SBCY8zZwqIjrd2NR6JCURQbf8POZFO4diRxb5u2w')
       }
     })
     .then(response => response.json())
@@ -35,10 +35,10 @@ const Faq = () => {
   useEffect(() => {
     if (activeSectionId) {
       console.log(`Fetching articles for section ID: ${activeSectionId}`);
-      fetch(`https://thereallifestyle.zendesk.com/api/v2/help_center/sections/${activeSectionId}/articles.json`, {
+      fetch(`https://wepsolhelp.zendesk.com/api/v2/help_center/sections/${activeSectionId}/articles.json`, {
         method: 'GET',
         headers: {
-          'Authorization': 'Basic ' + btoa('yenray.ng@trlco.world/token:O4N6Fysz582712RvT2Aux2gvbdabCExJOoh966nK')
+          'Authorization': 'Basic ' + btoa('shawnmichael78690@gmail.com/token:SBCY8zZwqIjrd2NR6JCURQbf8POZFO4diRxb5u2w')
         }
       })
       .then(response => response.json())
@@ -51,11 +51,9 @@ const Faq = () => {
   }, [activeSectionId]);
 
   // Handle tab change
-  const handleTabChange = (index) => {
-    console.log(`Tab clicked: ${sections[index]?.id}`);
-    if (sections[index]) {
-      setActiveSectionId(sections[index].id);
-    }
+  const handleTabChange = (tabId) => {
+    console.log(`Tab changed to: ${tabId}`);
+    setActiveSectionId(tabId);
   };
 
   return (
@@ -83,13 +81,8 @@ const Faq = () => {
               <span className='text-[#17271F] md:text-[32px] text-[26px] md:leading-[36px] leading-[29px] md:mb-0 mb-3 outfit-semibold block md:mt-0 mt-5'>Explore topics</span>
             </div>
             <div className='col-span-12 mt-5'>
-              <Tabs
-                aria-label="Pills"
-                variant="pills"
-                ref={tabsRef}
-                onActiveTabChange={(tab) => handleTabChange(tab)}
-              >
-                {sections.map((section, index) => (
+              <Tabs aria-label="Pills" variant="pills" className='faq-accordion' onChange={(tabId) => handleTabChange(tabId)}>
+                {sections.map(section => (
                   <Tabs.Item
                     key={section.id}
                     title={section.name}

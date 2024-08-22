@@ -13,6 +13,7 @@ import Partners from './pages/Partners';
 import RoadMap from './pages/Roadmap';
 import NotFound from './pages/NotFound';
 import Blog from './pages/Blog';
+import Contact from './pages/Contact';
 
 
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/roadmap" element={<RoadMap />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
