@@ -301,13 +301,14 @@ button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\
 }
 .header-white [data-testid="flowbite-navbar-collapse"] {
   position: absolute;
-  top: 100px;
+  top: 60px;
   background: #f5f5f5;
   left: 50%;
   width: 90%;
   transform: translateX(-50%);
   border-radius: 10px;
   padding: 10px;
+  z-index: 9;
 }
 .header-white [data-testid="flowbite-navbar-collapse"] ul{
   margin: 0px;
@@ -328,7 +329,7 @@ button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\
   width: 94.5%;
 }
 .header-white [data-testid="flowbite-dropdown"] button{
-  display: none;
+  /* display: none; */
 }
 .header-white [data-testid="flowbite-navbar-toggle"] svg {
   color: white !important;
@@ -346,7 +347,7 @@ button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\
   transform: translateX(-50%);
   border-radius: 10px;
   padding: 10px;
-  z-index: 1;
+  z-index: 9;
 }
 .header-colored [data-testid="flowbite-navbar-collapse"] ul{
   margin: 0px;
@@ -367,7 +368,7 @@ button.flex.w-full.items-center.justify-between.p-5.text-left.font-medium.first\
   width: 94.5%;
 }
 .header-colored [data-testid="flowbite-dropdown"] button{
-  display: none;
+  /* display: none; */
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #FF4A3F !important;
@@ -527,4 +528,46 @@ nav button span.sr-only {
   width: 2000px;
   color: #088AB5;
   transform: skewY(-10deg);
+}
+
+.owlvertical .owl-stage-outer {
+  height: 300px; /* Adjust height as needed */
+  transform: rotate(-90deg); /* Rotate the carousel */
+  transform-origin: center;
+}
+
+.owlvertical .owl-item {
+  transform: rotate(90deg); /* Rotate items back to normal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 4px;
+  height: 294px;
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  margin-top: 10px;
+}
+
+.progress {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to bottom, #FF4A3F, #088AB5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: height 2s ease-in-out;
+}
+
+.progress-top {
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(to bottom, #FF4A3F, #088AB5);
+  border-radius: 100%;
 }

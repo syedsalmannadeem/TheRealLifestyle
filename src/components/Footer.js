@@ -1,5 +1,6 @@
 import React from 'react';
 import iconX from '../assets/images/icon-x.png'
+import telegramIcon from '../assets/images/telegram-icon.png'
 import iconLi from '../assets/images/icon-li.png'
 import iconTg from '../assets/images/icon-tg.png'
 import iconMd from '../assets/images/icon-md.png'
@@ -9,7 +10,9 @@ import iconMap from '../assets/images/icon-map.png'
 
 const Footer = () => {
   return (
+    
     <footer className="bg-[#F6F6F2] py-6 md:py-8 lg:px-0 px-3">
+        <img className='md:right-[20px] right-[10px] fixed md:bottom-[20px] bottom-[10px] z-[99999]' src={telegramIcon}/>
         <div className='max-w-7xl mx-auto'>
             <div className='grid grid-cols-12 items-center'>
                 <div className='md:col-span-6 col-span-12 md:order-1 order-1'>
@@ -65,6 +68,8 @@ const Footer = () => {
             </div>
         </div>
     </footer>
+    
+    
   );
 };
 

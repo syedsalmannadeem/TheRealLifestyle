@@ -45,7 +45,7 @@ const RoadMap = () => {
                 </div>
                 <div className='md:col-span-12 col-span-12 relative'>
                   <span className='absolute right-0 top-0 h-full bg-[#fff]/80 z-[2] w-[10%] md:block hidden'></span>
-                  <div className='absolute md:left-0 right-0 top-[-20px] md:top-[280px] z-[999999]'>
+                  <div className='absolute md:left-0 right-0 top-[-20px] md:top-[280px] z-[2]'>
                     <button onClick={goToPrevSlide} className="custom-prev mr-3">
                         <img src={iconPrev} alt=""/>
                       </button>

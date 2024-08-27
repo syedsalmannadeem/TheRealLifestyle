@@ -33,31 +33,43 @@ const Contact = () => {
 
       const sendFormDataToSendGrid = async (formData) => {
         try {
-          const response = await axios.post('https://api.sendgrid.com/v3/marketing/contacts', 
-          {
-            "contacts": [
-              {
-                "email": formData.email,
-                "first_name": formData.name,
-                "phone_number": formData.phone,
-                "custom_fields": {
-                  "e1_T": formData.message // Assuming 'e1_T' is a custom field ID for message
+            const response = await axios.post(
+                'https://api.sendgrid.com/v3/marketing/contacts',
+                {
+                    contacts: [
+                        {
+                            email: formData.email,
+                            first_name: formData.name,
+                            phone_number: formData.phone,
+                            custom_fields: {
+                                e1_T: formData.message // Check if this field ID is correct
+                            }
+                        }
+                    ]
+                },
+                {
+                    headers: {
+                        'Authorization': `Bearer bPVhDQzqTNS9091KSXJtfg`, // Replace with your SendGrid API key
+                        'Content-Type': 'application/json'
+                    }
                 }
-              }
-            ]
-          },
-          {
-            headers: {
-              'Authorization': `Bearer YOUR_SENDGRID_API_KEY`,
-              'Content-Type': 'application/json'
-            }
-          });
-      
-          console.log('Form data sent successfully:', response.data);
+            );
+    
+            console.log('Form data sent successfully:', response.data);
         } catch (error) {
-          console.error('Error sending form data:', error);
+            if (error.response) {
+                // Server responded with a status other than 200 range
+                console.error('Error response:', error.response.data);
+            } else if (error.request) {
+                // Request was made but no response received
+                console.error('Error request:', error.request);
+            } else {
+                // Something else caused the error
+                console.error('Error:', error.message);
+            }
         }
-      };
+    };
+    
 
   return (
     <div>
@@ -81,7 +93,7 @@ const Contact = () => {
         <div className='max-w-[650px] mx-auto'>
             <div className='grid grid-cols-12'>
                 <div className='col-span-12'>
-                    <div className='bg-[#F6F6F2] border-[1px] border-[#e2e2e2] md:p-8 rounded-[10px]'>
+                    <div className='bg-[#F6F6F2] border-[1px] border-[#e2e2e2] md:p-8 p-6 rounded-[10px]'>
                         <form onSubmit={handleSubmit}>
                             <div className='grid grid-cols-12'>
                                 <div className='col-span-12 mb-3'>
@@ -104,7 +116,7 @@ const Contact = () => {
                                     <textarea className='w-full bg-[#e2e2e2] border-none' placeholder="Enter Message" id="message" name="message" value={formData.message} onChange={handleChange} required />
                                 </div>
                                 <div className='col-span-12'>
-                                    <button className='text-[#fff] bg-[#FF4A3F] border-[2px] border-[#FF4A3F] text-[16px] outfit-semibold md:px-6 py-2 rounded-[25px]' type="submit">Subscribe Now</button>
+                                    <button className='text-[#fff] bg-[#FF4A3F] border-[2px] border-[#FF4A3F] text-[16px] outfit-semibold md:px-6 py-2 px-3 rounded-[25px]' type="submit">Subscribe Now</button>
                                 </div>
                             </div>
                         </form>

@@ -15,6 +15,7 @@ import featured3 from '../assets/images/featured-3.png'
 import pillar1 from '../assets/images/pillar-1.png'
 import pillar2 from '../assets/images/pillar-2.png'
 import pillar3 from '../assets/images/pillar-3.png'
+import pillar4 from '../assets/images/pillar-4.png'
 import experienced1 from '../assets/images/experienced-1.png'
 import experienced2 from '../assets/images/experienced-2.png'
 import experienced3 from '../assets/images/experienced-3.png'
@@ -169,33 +170,36 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pt-16 pt-5 md:px-0 px-3' ref={sectionRef} style={{
-        color: isInView ? '#FF4A3F' : '#FFEEED',
-        transition: 'color 0.3s ease',
-      }}>
-            <div className='max-w-7xl mx-auto'>
-                <div className='grid grid-cols-12'>
-                    <div className='col-span-12'>
-                    <span className='md:text-[48px] text-[24px] leading-[35px] outfit-bold md:leading-[72px] text-center block max-w-[1000px] mx-auto'>
-                    {text.split('').map((letter, index) => (
-                <span
-                  key={index}
-                  className={`letter ${
-                    isInView ? 'letter-visible' : ''
-                  }`}
-                  style={{
-                    transition: `color 0.3s ease ${index * 0.01}s`,
-                  }}
-                >
-                  {/* Render a non-breaking space for actual spaces */}
-                  {letter === ' ' ? '\u00A0' : letter}
+        <div
+      className="md:pt-16 pt-5 md:px-0 px-3"
+      ref={sectionRef}
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-12">
+          <div className="col-span-12">
+            <span
+              className="md:text-[45px] text-[24px] leading-[35px] outfit-bold md:leading-[72px] text-center block max-w-[1000px] mx-auto"
+            >
+              {text.split(' ').map((word, wordIndex) => (
+                <span key={wordIndex} style={{ whiteSpace: 'nowrap', display: 'inline-block', marginRight: '0.25em' }}>
+                  {word.split('').map((letter, letterIndex) => (
+                    <span
+                      key={letterIndex}
+                      style={{
+                        transition: `color 0.5s ease ${letterIndex * 0.05 + wordIndex * 0.3}s`,
+                        color: isInView ? '#000000' : '#FFEEED',
+                      }}
+                    >
+                      {letter}
+                    </span>
+                  ))}
                 </span>
               ))}
             </span>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+    </div>
         <div className='md:pb-16'>
             <div className='max-w-[1600px] mx-auto'>
                 <div className='grid grid-cols-12'>
@@ -766,23 +770,30 @@ const Home = () => {
                     >
                         <div className='item'>
                             <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
-                                <img alt="" className='absolute z-[-1] md:right-[-20px] left-0 md:w-auto w-full' src={pillar1}/>
+                                <img alt="" className='absolute z-[-1] md:left-[15px] left-[15px] md:w-auto w-full' src={pillar1}/>
                                 <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>seamless</span></h5>
-                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5'>Our streamlined procedures make these processes transparent, flexible, secure, and affordable. We believe that simplicity is the key to enjoying life’s greatest pleasures.</p>
+                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5 md:pl-0 pl-5'>Our streamlined procedures make these processes transparent, flexible, secure, and affordable. We believe that simplicity is the key to enjoying life’s greatest pleasures.</p>
                             </div>
                         </div>
                         <div className='item'>
                             <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
-                                <img alt="" className='absolute z-[-1] md:right-[-20px] left-0 md:w-auto w-full' src={pillar2}/>
+                                <img alt="" className='absolute z-[-1] md:left-[15px] left-[15px] md:w-auto w-full' src={pillar2}/>
                                 <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>accessible</span></h5>
-                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5'>Our goal is to provide choices that empower you to shape your living situation according to your desires, whether you prefer traditional home ownership or flexible rental arrangements.</p>
+                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5 md:pl-0 pl-5'>Our goal is to provide choices that empower you to shape your living situation according to your desires, whether you prefer traditional home ownership or flexible rental arrangements.</p>
                             </div>
                         </div>
                         <div className='item'>
                             <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
-                                <img alt="" className='absolute z-[-1] md:right-[-20px] left-0 md:w-auto w-full' src={pillar3}/>
+                                <img alt="" className='absolute z-[-1] md:left-[15px] left-[15px] md:w-auto w-full' src={pillar3}/>
                                 <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>borderless</span></h5>
-                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5'>Our services and solutions support a modern lifestyle, allowing you to seamlessly transition between different aspects of your life, no matter where you are.</p>
+                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5 md:pl-0 pl-5'>Our services and solutions support a modern lifestyle, allowing you to seamlessly transition between different aspects of your life, no matter where you are.</p>
+                            </div>
+                        </div>
+                        <div className='item'>
+                            <div className='max-w-[80%] mx-auto relative md:h-[380px] md:pl-0 px-5'>
+                                <img alt="" className='absolute z-[-1] md:left-[15px] left-[15px] md:w-auto w-full' src={pillar4}/>
+                                <h5 className='md:text-[42px] text-[36px] leading-[38px] outfit-bold md:pt-16 pt-8 md:leading-[48px] mb-6 block'>Live <span className='block'>for real</span></h5>
+                                <p className='text-[#17271F] text-[16px] leading-[24px] md:w-[88%] ml-auto md:mb-0 mb-5 md:pl-0 pl-5'>Our global passport and interconnected ecosystem are designed to break down barriers and provide equal access to opportunities. </p>
                             </div>
                         </div>
                         </OwlCarousel>

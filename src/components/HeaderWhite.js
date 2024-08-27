@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from '../assets/images/logo-wh.png'
+import whitePaperIcon from '../assets/images/whitepaper-icon.png'
 import navCompany from '../assets/images/nav-company.png'
 import navLearn from '../assets/images/nav-learn.png'
 import navEcosystem from '../assets/images/nav-ecosystem.png'
@@ -10,6 +11,11 @@ import { Navbar, Dropdown} from 'flowbite-react';
 import { Link } from 'react-router-dom';
 
 const HeaderWhite = () => {
+
+    const redirectToWhitePaper = () => {
+        window.location.href = 'https://whitepaper.trlco.world/trl'; // Replace with your desired external link
+    };
+
   return (
             <div className='col-span-12'>
                 <div className='md:block hidden'>
@@ -77,7 +83,7 @@ const HeaderWhite = () => {
                                                                     <a href="/ecosystem">TRL Ecosystem</a>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="/whitepaper">Whitepaper</a>
+                                                                <a className='cursor-pointer flex flex-row items-center gap-x-4' onClick={redirectToWhitePaper}>Whitepaper <img className='w-[14px] h-[14px]' src={whitePaperIcon}/></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -147,7 +153,7 @@ const HeaderWhite = () => {
                                         <div className="grid grid-cols-12 py-3 px-2">
                                             <div className="col-span-12">
                                                 <div className="relative group lg:px-5 px-3">
-                                                    <div className='grid grid-cols-12 items-center'>
+                                                    <div className='grid grid-cols-12 items-start'>
                                                         <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
@@ -155,9 +161,6 @@ const HeaderWhite = () => {
                                                                 </li>
                                                                 <li>
                                                                     <a href="/media">Media Release</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="/partners">Partners</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -212,7 +215,7 @@ const HeaderWhite = () => {
                                     <Dropdown label="Token Ecosystem" inline={true}>
                                     <Dropdown.Item href="/roadmap">Roadmap</Dropdown.Item>
                                     <Dropdown.Item href="/ecosystem">TRL Ecosystem</Dropdown.Item>
-                                    <Dropdown.Item href="/whitepaper">Whitepaper</Dropdown.Item>
+                                    <Dropdown.Item className='cursor-pointer' onClick={redirectToWhitePaper}>Whitepaper  <img className='w-[14px] h-[14px]' src={whitePaperIcon}/> </Dropdown.Item>
                                     </Dropdown>
                                     <Dropdown label="Learn" inline={true}>
                                     <Dropdown.Item href="/blog">Blog</Dropdown.Item>
@@ -222,7 +225,6 @@ const HeaderWhite = () => {
                                     <Dropdown label="Company" inline={true}>
                                     <Dropdown.Item href="/about">About</Dropdown.Item>
                                     <Dropdown.Item href="/media">Media Releases</Dropdown.Item>
-                                    <Dropdown.Item href="/partners">Partners</Dropdown.Item>
                                     </Dropdown>
                                 </Navbar.Collapse>
                             </Navbar>

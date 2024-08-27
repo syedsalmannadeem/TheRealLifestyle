@@ -135,19 +135,19 @@ const About = () => {
                         <span className='text-[#17271F] md:text-[42px] md:leading-[52px] text-[30px] leading-[34px] outfit-bold block md:mb-0 mb-5'>Meet the leadership team</span>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership1} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={leadership1} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership2} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={leadership2} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership5} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={leadership5} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
@@ -155,13 +155,13 @@ const About = () => {
                     <div className='md:col-span-2 col-span-12'>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership3} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={leadership3} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-4 col-span-12'>
-                        <img src={leadership4} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={leadership4} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
@@ -170,25 +170,25 @@ const About = () => {
                         <span className='text-[#17271F] md:text-[34px] md:leading-[38px] text-[22px] leading-[26px] outfit-bold block'>Advisor</span>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor1} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={advisor1} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor2} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={advisor2} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor3} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={advisor3} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>
                     </div>
                     <div className='md:col-span-3 col-span-12'>
-                        <img src={advisor4} className='mx-auto mb-2 md:w-auto w-[60%]' alt=""/>
+                        <img src={advisor4} className='mx-auto mb-2 md:w-auto w-[60%] max-h-[240px]' alt=""/>
                         <span className='block text-center text-[18px] text-[#17271F] outfit-bold'>Adrian Gaffor</span>
                         <span className='block text-center text-[14px] text-[#565656] mb-1 outfit-regular'>Co-founder & CEO</span>
                         <img src={iconLiColor} className='mx-auto' alt=""/>

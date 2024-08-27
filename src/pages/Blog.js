@@ -44,6 +44,42 @@ function Blog() {
         return words.slice(0, wordLimit).join(' ') + '...'; // Add ellipsis
       };
 
+      const extractImageSrc = (htmlContent) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlContent, 'text/html');
+        const img = doc.querySelector('img');
+        return img ? img.src : null;
+      };
+
+      const PostImage = ({ content }) => {
+        // Extract the image source once and store it in a variable
+        const imageSrc = extractImageSrc(content);
+      
+        return (
+          <div
+            className='mb-2 rounded-[5px] w-full'
+            style={{
+              backgroundColor: !imageSrc ? '#f0f0f0' : 'transparent', // Gray background if no image
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+          >
+            {imageSrc ? (
+              <img
+                className='max-h-[170px] min-h-[170px] w-full object-contain rounded-[5px]'
+                src={imageSrc}
+                alt="Post Image"
+              />
+            ) : (
+              <span>No Image Available</span> // Fallback content if no image
+            )}
+          </div>
+        );
+      };
+
   return (
     <div>
       <Topbar />
@@ -68,10 +104,18 @@ function Blog() {
             {posts.length > 0 ? (
                 posts.map((post) => (
                     <div key={post._id} className='md:col-span-4 col-span-12'>
-                        <div className='cs-boxshadow rounded-[10px] h-full flex flex-row items-center'>
+                        <div className='cs-boxshadow rounded-[10px] flex flex-row items-start'>
                         
                         <div className='p-5'>
-                            
+                              {/* <img
+                                className='max-h-[170px] min-h-[170px] !w-full mb-3 object-contain mr-auto rounded-[5px]'
+                                src={extractImageSrc(post.content)}
+                                alt="Post Image"
+                              /> */}
+
+                            <PostImage content={post.content} />
+
+                            {/* <img className='mb-2 rounded-[5px] max-h-[160px] w-full object-contain' src={extractImageSrc(post.content)}/> */}
                             {/* <span>
                             <div dangerouslySetInnerHTML={{ __html: post.content }} />
                             </span> */}
