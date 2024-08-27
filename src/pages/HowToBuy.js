@@ -18,7 +18,7 @@ const HowToBuy = () => {
   const [currentImage, setCurrentImage] = useState(howtobuySteps1); // Set default image URL
 
   // Ref to access the OwlCarousel instance
-  // const owlRef = useRef(null);
+  const owlRef = useRef(null);
 
   // Define an array of images for each slide
   const slideImages = [
@@ -69,31 +69,31 @@ const resetProgressBar = () => {
   }, 50); // Short delay to ensure reset takes effect before animating
 };
 
-// const handleOnTranslated = (event) => {
-//   const index = event.item.index;
-//   console.log(index);
-  // if(index == 0){
-  //   setCurrentImage(howtobuySteps1);
-  // }else if(index == 1){
-  //   setCurrentImage(howtobuySteps2);
-  // }else if(index == 2 ){
-  //   setCurrentImage(howtobuySteps3);
-  // }else if(index == 3 ){
-  //   setCurrentImage(howtobuySteps4);
-  // }
-// };
+const handleOnTranslated = (event) => {
+  const index = event.item.index;
+  console.log(index);
+  if(index === 0){
+    setCurrentImage(howtobuySteps1);
+  }else if(index === 1){
+    setCurrentImage(howtobuySteps2);
+  }else if(index === 2 ){
+    setCurrentImage(howtobuySteps3);
+  }else if(index === 3 ){
+    setCurrentImage(howtobuySteps4);
+  }
+};
 
 // Function to handle button click
 const handleButtonClick = (imageIndex) => {
   console.log(imageIndex);
   const indexImage = Number(imageIndex);
-  if(indexImage === 1){
+  if(indexImage == 1){
     setCurrentImage(howtobuySteps1);
-  }else if(indexImage === 2){
+  }else if(indexImage == 2){
     setCurrentImage(howtobuySteps2);
-  }else if(indexImage === 3 ){
+  }else if(indexImage == 3 ){
     setCurrentImage(howtobuySteps3);
-  }else if(indexImage === 4 ){
+  }else if(indexImage == 4 ){
     setCurrentImage(howtobuySteps4);
   }
 };
@@ -137,7 +137,7 @@ const handleButtonClick = (imageIndex) => {
                     <div className='md:col-span-6 col-span-12 relative'>
                     <div className='relative'>
       <OwlCarousel
-        // ref={owlRef}
+        ref={owlRef}
         items={1}
         loop={false}
         autoplay
@@ -153,7 +153,7 @@ const handleButtonClick = (imageIndex) => {
         responsiveRefreshRate={200}
         mouseDrag={false}
         touchDrag={false}
-        // onTranslated={handleOnTranslated}
+        onTranslated={handleOnTranslated}
       >
         <div className="item">
           {/* Slide 1 Content */}
