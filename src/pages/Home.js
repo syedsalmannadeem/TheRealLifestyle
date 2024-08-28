@@ -1,6 +1,13 @@
 import React,{ useEffect, useRef, useState } from 'react';
+import { gsap } from '../assets/js/gsap.min.js';
+import ScrollTrigger from '../assets/js/ScrollTrigger.min.js';
+import ScrollSmoother from '../assets/js/ScrollSmoother.min.js';
+import SplitText from '../assets/js/SplitText.min.js';
+import shapeRuby from '../assets/images/shape-ruby.png';
+import emerald from '../assets/images/emerald-r.png';
 import bgComingSoon from '../assets/images/bgcomingsoon.png'
-import homeBanner from '../assets/images/home-banner.png'
+import arrowh from '../assets/images/h-arrow-down.png'
+import homeBanner from '../assets/images/home-banner-2.png'
 import cloud1 from '../assets/images/cloud-1.png'
 import cloud2 from '../assets/images/cloud-2.png'
 import bgInvestIn from '../assets/images/bg-investin.png'
@@ -43,20 +50,26 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.min.css';
 import 'owl.carousel/dist/assets/owl.theme.default.min.css';
 import HeaderWhite from '../components/HeaderWhite';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Topbar from '../components/Topbar';
 import investbgNew from '../assets/images/invest-bg-new.png'
 import livebgNew from '../assets/images/live-bg-new.png'
-
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 
 const Home = () => {
+
+
+
     const sectionRef = useRef(null);
     const [isInView, setIsInView] = useState(false);
     const carouselRef = useRef(null);
+
+
+      
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -151,14 +164,22 @@ const Home = () => {
   return (
     <div>
         <Topbar/>
-        <div className='md:py-2 mt-5 header-white'>
+        <div className='md:hidden block'>
+            <Header/>
+        </div>
+        <div className='md:py-2 md:mt-5 header-white'>
             <div className='max-w-[1400px] mx-auto lg:px-0 px-3'>
-                <div className='bg-no-repeat bg-cover md:rounded-[50px] lg:p-10 px-5 py-8 md:m-0 rounded-[12px] relative overflow-clip' style={{ backgroundImage: `url(${homeBanner})` }}>
+                <div className='bg-no-repeat !bg-cover bg-center md:rounded-[50px] lg:p-10 px-5 py-8 md:m-0 rounded-[12px] relative overflow-clip' style={{ backgroundImage: `url(${homeBanner})` }}>
                     <img alt="" className='absolute left-0 top-0' src={cloud1} data-aos='fade-right' data-aos-once="false"  data-aos-duration="1800" data-aos-offset="50" />
                     <img alt="" className='absolute right-0 top-0' src={cloud2} data-aos='fade-left' data-aos-once="false"  data-aos-duration="1800" data-aos-offset="50" />
-                    <img alt="" className='absolute bottom-0 left-0' src={popBottom}/>
+                    {/* <img alt="" className='absolute bottom-0 left-0' src={popBottom}/> */}
+                    <div className='bg-[#17271F]/20 w-[50px] h-[50px] rounded-full flex flex-row items-center justify-center absolute bottom-[15px] left-[50%] translate-x-[-50%]'>
+                        <img src={arrowh} className='animate-bounce mt-[4px]'/>
+                    </div>
                     <div className='grid grid-cols-12 items-center relative z-[1]'>
-                        <HeaderWhite/>
+                        
+                            <HeaderWhite/>
+                        
                         <div className='col-span-12'>
                             <div className='md:h-[650px] h-[350px] flex flex-col items-center justify-center'>
                                 <span className='text-[#fff] md:text-[72px] text-[38px] leading-[42px] md:leading-[80px] outfit-bold block text-center md:mb-5' data-aos='fade-up' data-aos-once="false" data-aos-duration="1800" data-aos-offset="200">The future of real estate <span className='md:block'>in onchain</span></span>    
@@ -465,7 +486,7 @@ const Home = () => {
                         <div className='relative lg:min-h-[600px]'>
                         
                             <img alt="" src={homeInvest} className='h-full w-full relative z-[9]' />
-                            <div className='absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-40%] z-[99] max-w-[60%]'>
+                            <div className='absolute md:left-[40%] left-[15px] top-[50%] translate-y-[-50%] md:translate-x-[-40%] z-[99] md:max-w-[60%] md:w-auto !w-[100%] max-w-[86%]'>
                                 <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[55px] outfit-bold lg:leading-[66px]'>
                                     Invest in properties globally without getting locked in (or out)
                                 </span>
@@ -484,7 +505,7 @@ const Home = () => {
                     <div className='md:col-span-6 col-span-12 lg:ml-[-15px]'>
                         <div className='relative lg:min-h-[612px] md:min-h-[600px]'>
                             <img alt="" src={homeLive} className='h-full w-full relative z-[-1]' />
-                            <div className='absolute left-[40%] top-[50%] translate-y-[-50%] translate-x-[-35%] z-[1] max-w-[60%]'>
+                            <div className='absolute md:left-[40%] left-[15px] top-[50%] translate-y-[-50%] md:translate-x-[-35%] z-[1] md:max-w-[60%] md:w-auto !w-[100%] max-w-[90%]'>
                                 <span className='block text-[#fff] text-[28px] leading-[32px] md:text-[30px] md:leading-[34px] lg:text-[55px] outfit-bold lg:leading-[66px]'>
                                     Experience global living without boundaries
                                 </span>
@@ -602,11 +623,13 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='md:pb-16 md:pt-24 lg:px-0 px-3 pb-6 cs-accordion' style={{ backgroundImage: `url(${bgUsp})` }}>
+        <div className='md:pb-16 md:pt-24 lg:px-0 px-3 pb-6 cs-accordion relative' style={{ backgroundImage: `url(${bgUsp})` }}>
+            <img src={shapeRuby} className='absolute left-0 top-[-20px] w-full'/>
+            <img src={emerald} data-aos='fade-down' data-aos-once="false"  data-aos-duration="1800" className='absolute md:left-[50%] md:translate-x-[-50%] left-[50%] !translate-x-[-50%] max-w-[50px] md:max-w-[140px] md:top-[290px] z-[9] w-full'/>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12 items-center md:gap-x-10'>
                     <div className='col-span-12 text-center'>
-                        <span className='text-[#17271F] text-[32px] md:leading-[52px] leading-[35px] md:mb-5 mb-5 md:text-[48px] outfit-bold block'>Unlock real world value with $TRLCO</span>
+                        <span className='text-[#17271F] text-[32px] md:leading-[52px] leading-[35px] md:mb-5 mb-5 md:text-[48px] outfit-bold block md:pt-14 pt-14'>Unlock real world value with $TRLCO</span>
                         <span className='text-[#565656] text-[16px] outfit-regular max-w-[600px] mx-auto block'>
                             $TRLCO is the main utility token powering the TRL 360 ecosystem.
                             Earn and redeem $TRLCO for lifestyle privileges like dining and experiences.
@@ -752,6 +775,7 @@ const Home = () => {
                         loop
                         margin={30}
                         nav={false}
+                        dots={false}
                         items={5.2}
                         autoplay
                         autoplayTimeout={3000}
@@ -801,15 +825,15 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='md:py-16 lg:px-0 px-3'>
+        <div className='md:py-16 lg:px-0 px-3 py-8'>
             <div className='max-w-7xl mx-auto'>
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12 text-center'>
                         <span className='text-[#17271F] md:text-[32px] text-[26px] md:leading-[36px] leading-[29px] md:mb-3 mb-3 outfit-semibold block'>Backed by experienced Web 2 and Web 3 experts</span>
-                        <span className='text-[#565656] text-[16px] outfit-regular'>Our team has decades of leadership experience at market leaders in the blockchain, real estate, financial services, and gaming sectors.</span>
+                        <span className='text-[#565656] text-[16px] outfit-regular md:mb-5 mb-5'>Our team has decades of leadership experience at market leaders in the blockchain, real estate, financial services, and gaming sectors.</span>
                     </div>
                     <div className='col-span-2 md:block hidden'></div>
-                    <div className='md:col-span-8 md:mt-5 col-span-12 text-center'>
+                    <div className='md:col-span-8 md:mt-5 mt-8 col-span-12 text-center'>
                     <OwlCarousel
                         className="owl-theme owl-clients"
                         loop
@@ -1025,9 +1049,9 @@ const Home = () => {
         <div className="bg-no-repeat bg-cover lg:px-0 px-3 lg:py-0 pb-6 pt-6" style={{ backgroundImage: `url(${bgComingSoon})` }}>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-12 items-center">
-                    <div className="md:col-span-6 col-span-12 lg:py-0 py-0">
-                        <span className='block md:text-[30px] md:leading-[40px] text-[22px] orange-text3 outfit-bold mb-2'>Coming Soon</span>
-                        <span className='block md:text-[48px] text-[30px] md:leading-[52px] leading-[36px] outfit-bold mb-6 md:mb-6 max-w-[480px]'>
+                    <div className="md:col-span-6 col-span-12 md:py-[80px] py-[30px]">
+                        <span className='block md:text-[30px] md:leading-[40px] text-[22px] orange-text3 outfit-bold md:mb-[24px] mb-[12px]'>Coming Soon</span>
+                        <span className='block md:text-[48px] text-[30px] md:leading-[52px] leading-[36px] outfit-bold mb-6 md:mb-10 max-w-[480px]'>
                             Unlock the future of real estate with TRL Marketplace
                         </span>
                         <ul>
@@ -1060,7 +1084,7 @@ const Home = () => {
                         </ul>
                     </div>
                     <div className="md:col-span-6 col-span-12">
-                        <img alt="" src={unlockFeature} className="md:w-[85%] mx-auto" />
+                        <img alt="" src={unlockFeature} className="md:w-[100%] mx-auto" />
                     </div>
                 </div>
             </div>
@@ -1070,7 +1094,7 @@ const Home = () => {
                 <div className='grid grid-cols-12'>
                     <div className='col-span-12'>
                         <div className='relative'>
-                            <span className="lg:w-[65%] cursor-pointer text-center orange-text3 lg:text-[92px] md:text-[60px] md:w-[65%] w-[80%] text-[30px] absolute left-[50%] top-[50%] block translate-x-[-50%] translate-y-[-50%] outfit-bold">Invest in $TRLX1 &#10548;</span>
+                            <span className="lg:w-[65%] cursor-pointer text-center orange-text3 lg:text-[72px] md:text-[60px] md:w-[65%] w-[80%] text-[24px] absolute left-[50%] top-[50%] block translate-x-[-50%] translate-y-[-50%] outfit-bold">Invest in $TRLX1 &#10548;</span>
                             <img alt="" className='max-w-[100%] mx-auto' src={bgInvestIn}/>
                         </div>
                         
@@ -1078,15 +1102,16 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <div className='lg:px-0 px-3 md:pb-0 pb-10'>
+        <div className='lg:px-0 px-3 md:pb-0 pb-10 swiper'>
             <div className='max-w-7xl mx-auto md:py-6'>
                 <div className='grid grid-cols-12'>
-                    <div className='col-span-12'>
+                    <div className='col-span-12 md:block hidden'>
                         <ul className='flex md:flex-row flex-col items-center justify-center md:gap-x-5 gap-x-1 md:gap-y-0 gap-y-2'>
                             <li>
                                 <span className='text-[#565656] md:text-[16px] text-[22px] outfit-regular md:inline mb-4'>Proudly featured in</span>
                             </li>
                             <li>
+                                
                                 <img alt="" src={featured1}/>
                             </li>
                             <li>
@@ -1096,6 +1121,42 @@ const Home = () => {
                                 <img alt="" src={featured3}/>
                             </li>
                         </ul>
+                    </div>
+                    <div className='col-span-12 md:hidden block'>
+                    <span className='text-[#565656] text-[16px] block outfit-regular md:inline mb-4 text-center'>Proudly featured in</span> 
+                    <OwlCarousel
+                        className="owl-theme owl-clients"
+                        loop
+                        center
+                        margin={30}
+                        nav={false}
+                        dots={false}
+                        autoplay
+                        autoplayTimeout={1000}
+                        autoplayHoverPause
+                        smartSpeed={1000}
+                        responsive={{
+                            0: {
+                            items: 3.2,
+                            },
+                            600: {
+                            items: 2.2,
+                            },
+                            1000: {
+                            items: 3,
+                            },
+                        }}
+                    >
+                            <div className='item justify-center'>
+                                <img alt="" className='!max-h-[50px] !w-auto !mx-auto' src={featured1}/>
+                            </div>
+                            <div className='item justify-center'>
+                                <img alt="" className='!max-h-[50px] !w-auto !mx-auto' src={featured2}/>
+                            </div>
+                            <div className='item justify-center'>
+                                <img alt="" className='!max-h-[50px] !w-auto !mx-auto' src={featured3}/>
+                            </div>
+                        </OwlCarousel>
                     </div>
                 </div>
             </div>

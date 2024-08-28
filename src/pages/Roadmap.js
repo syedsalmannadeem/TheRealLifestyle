@@ -59,8 +59,7 @@ const RoadMap = () => {
                         margin={30}
                         nav={false}
                         dots={false}
-                        autoplay
-                        autoplayTimeout={3000}
+                        
                         autoplayHoverPause
                         responsive={{
                             0: {
@@ -116,22 +115,26 @@ const RoadMap = () => {
                             <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
-                                  <li className='text-[#8A8A8A]'>Finalized Corporate Structure, Legal and Tokenization Framework</li>
-                                  <li className='text-[#8A8A8A]'>Signed 74 properties into Property Pool with Promissory Notes (Malaysia) </li>
-                                  <li className='text-[#8A8A8A]'>⁠6 F&B and Bangkok Hotel Partnerships onboarded </li>
+                                  <li className='text-[#8A8A8A]'>Continued onboarding partners and properties into ecosystem</li>
+                                  <li className='text-[#8A8A8A]'>Secured partnership deal with Dubai property developers </li>
+                                  <li className='text-[#8A8A8A]'>⁠Onboard $3M worth for TRLX 1 Dubai</li>
                                 </ul>
 
                                 <span className='md:text-[32px] outfit-bold text-[#565656] mt-6 block'>Product</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
-                                  <li className='text-[#8A8A8A]'>Tokenomics finalized </li>
-                                  <li className='text-[#8A8A8A]'>⁠Investor DApp portal and Utility Application prototype under development  </li>
+                                  <li className='text-[#8A8A8A]'>Overall Tech Architecture developed  </li>
+                                  <li className='text-[#8A8A8A]'>⁠Smart Contract Deployment on Testnet</li>
+                                  <li className='text-[#8A8A8A]'>⁠⁠$TRLX 0 (Johor Property) tokens ready on Testnet</li>
+                                  <li className='text-[#8A8A8A]'>⁠Partnership with IXSwap</li>
+                                  <li className='text-[#8A8A8A]'>⁠⁠$TRLX Investor DApp Portal under development </li>
                                 </ul>
 
                                 <span className='md:text-[32px] outfit-bold text-[#565656] mt-6 block'>Funding & Marketing</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
-                                  <li className='text-[#8A8A8A]'>⁠Approved Grant offer from SKALE worth $300K</li>
-                                  <li className='text-[#8A8A8A]'>Commencement of Marketing Campaign </li>
-                                  <li className='text-[#8A8A8A]'>⁠Commencement of Advisory Incubation </li>
+                                  <li className='text-[#8A8A8A]'>IOTA Grant approved worth $37K</li>
+                                  <li className='text-[#8A8A8A]'>⁠Collaboration with Regional Project Partners </li>
+                                  <li className='text-[#8A8A8A]'>⁠Secured strategic advisors and partners during major web3 events </li>
+                                  <li className='text-[#8A8A8A]'>⁠Started connections with T1 Launchpads and Exchanges</li>
                                 </ul>
                             </div>
 
@@ -148,22 +151,58 @@ const RoadMap = () => {
                             <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
                                 <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
-                                  <li className='text-[#8A8A8A]'>Finalized Corporate Structure, Legal and Tokenization Framework</li>
-                                  <li className='text-[#8A8A8A]'>Signed 74 properties into Property Pool with Promissory Notes (Malaysia) </li>
-                                  <li className='text-[#8A8A8A]'>⁠6 F&B and Bangkok Hotel Partnerships onboarded </li>
+                                  <li className='text-[#8A8A8A]'>To secure partnership with DLD (Dubai Land Office) to have live data on Investor platform</li>
+                                  <li className='text-[#8A8A8A]'>To continue onboarding strategic partners and properties in Dubai, Bali and Thailand</li>
                                 </ul>
 
                                 <span className='md:text-[32px] outfit-bold text-[#565656] mt-6 block'>Product</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
-                                  <li className='text-[#8A8A8A]'>Tokenomics finalized </li>
-                                  <li className='text-[#8A8A8A]'>⁠Investor DApp portal and Utility Application prototype under development  </li>
+                                  <li className='text-[#8A8A8A]'>MVP for $TRLX Investor DaPP Portal to go live (Sept 24’)</li>
+                                  <li className='text-[#8A8A8A]'>⁠Staking Protocols to go live (Sept 24’)</li>
+                                  <li className='text-[#8A8A8A]'>Audit for Token and Staking contracts to go live (Sept 24’)</li>
+                                  <li className='text-[#8A8A8A]'>$TRLX 1 and ⁠IXSwap to go live (Sept 24’)</li>
+                                  <li className='text-[#8A8A8A]'>HOMESUB platform under development</li>
                                 </ul>
 
                                 <span className='md:text-[32px] outfit-bold text-[#565656] mt-6 block'>Funding & Marketing</span>
                                 <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
-                                  <li className='text-[#8A8A8A]'>⁠Approved Grant offer from SKALE worth $300K</li>
-                                  <li className='text-[#8A8A8A]'>Commencement of Marketing Campaign </li>
-                                  <li className='text-[#8A8A8A]'>⁠Commencement of Advisory Incubation </li>
+                                  <li className='text-[#8A8A8A]'>Commencement of Aggressive PR campaigns globally </li>
+                                  <li className='text-[#8A8A8A]'>⁠More collaboration partners with protocols and related parties</li>
+                                  <li className='text-[#8A8A8A]'>⁠1st Live RWA side Event in Malaysia Blockchain Week and others</li>
+                                  <li className='text-[#8A8A8A]'>Secured Private and Public Round Commitments with Launchpads </li>
+                                  <li className='text-[#8A8A8A]'>⁠Secured top T1 Exchange IEO offers</li>
+                                </ul>
+                            </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div className='item md:m-0 m-[12px]'>
+                          <div className='grid grid-cols-12'>
+                            <div className='md:col-span-5 col-span-12'>
+                              <span className='block md:text-[90px] text-[50px] leading-[55px] text-[#FF4A3F] outfit-bold md:leading-[100px] md:mt-10'>Q4 <span className='block'>2024</span></span>
+                            </div>
+                            <div className='md:col-span-7 col-span-12'>
+
+                            <div className='mx-auto relative cs-boxshadow md:m-10 m-8 rounded-[25px] md:p-8 p-6'>
+                                <span className='md:text-[32px] outfit-bold text-[#565656]'>Project</span>
+                                <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
+                                  <li className='text-[#8A8A8A]'>Finalized strategic partnerships and properties in key markets: Malaysia, Dubai, Bali and Thailand</li>
+                                  
+                                </ul>
+
+                                <span className='md:text-[32px] outfit-bold text-[#565656] mt-6 block'>Product</span>
+                                <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
+                                  <li className='text-[#8A8A8A]'>TaaS Platform under development</li>
+                                  <li className='text-[#8A8A8A]'>⁠HOMESUB Consumer Platform launch </li>
+                                  <li className='text-[#8A8A8A]'>⁠Investor DApp platform bridge and swap features ready </li>
+                                </ul>
+
+                                <span className='md:text-[32px] outfit-bold text-[#565656] mt-6 block'>Funding & Marketing</span>
+                                <ul className='!list-disc flex flex-col gap-y-3 mt-3 pl-5'>
+                                  <li className='text-[#8A8A8A]'>Closed Private and Public Rounds in Launchpads </li>
+                                  <li className='text-[#8A8A8A]'>IEO round complete</li>
+                                  <li className='text-[#8A8A8A]'>⁠Token Listing in top tier Exchanges and TGE (Oct 24’)</li>
                                 </ul>
                             </div>
 

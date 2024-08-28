@@ -8,10 +8,11 @@ import navInvestment1 from '../assets/images/nav-investment-1.png'
 import navInvestment2 from '../assets/images/nav-investment-2.png'
 import navInvestment3 from '../assets/images/nav-investment-3.png'
 import { Navbar, Dropdown} from 'flowbite-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const redirectToWhitePaper = () => {
-        window.location.href = 'https://whitepaper.trlco.world/trl'; // Replace with your desired external link
+        window.open('https://whitepaper.trlco.world/trl', '_blank');
     };
   return (
     <div className="lg:px-0 px-3 md:py-4 py-3 header-colored">
@@ -20,14 +21,15 @@ const Header = () => {
                 <div className='col-span-12 md:block hidden'>
                     <div className='grid grid-cols-12 items-center'>
                         <div className='col-span-1'>
-                            <a href="/">
+                            
+                            <Link to={`/`} className='hover:text-[#000]/50 transition-all duration-300 ease-in-out'>
                                 <img alt="" className='inline' src={Logo}/>
-                            </a>
+                            </Link>
                         </div>
                         <div className='col-span-7'>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="#">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all hover:text-[#000000]/50 ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Investments
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
@@ -41,13 +43,24 @@ const Header = () => {
                                                 <div className="relative group md:p-3">
                                                     <div className='grid grid-cols-12 items-center gap-x-4'>
                                                         <div className='md:col-span-4'>
-                                                            <img alt="" src={navInvestment1}/>
+                                                            <div className='relative cursor-pointer'>
+                                                                <span className='absolute left-[10px] top-[10px] text-[14px] outfit-medium'>United Arab Emirates</span>
+                                                                <img alt="" src={navInvestment1}/>
+                                                            </div>
                                                         </div>
                                                         <div className='md:col-span-4'>
-                                                            <img alt="" src={navInvestment2}/>
+                                                            <div className='relative cursor-pointer'>
+                                                                <span className='absolute left-[10px] top-[10px] text-[14px] outfit-medium'>Kuala Lumpur</span>
+                                                                <span className='bg-[#088AB5] text-[#fff] rounded-[5px] left-[10px] px-1 py-[2px] absolute top-[33px] text-[12px]'>Coming Soon</span>
+                                                                <img alt="" src={navInvestment2}/>
+                                                            </div>
                                                         </div>
                                                         <div className='md:col-span-4'>
-                                                            <img alt="" src={navInvestment3}/>
+                                                            <div className='relative cursor-pointer'>
+                                                                <span className='absolute left-[10px] top-[10px] text-[14px] outfit-medium'>Bali</span>
+                                                                <span className='bg-[#088AB5] text-[#fff] rounded-[5px] left-[10px] px-1 py-[2px] absolute top-[33px] text-[12px]'>Coming Soon</span>
+                                                                <img alt="" src={navInvestment3}/>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -60,7 +73,7 @@ const Header = () => {
                             </div>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="#">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all hover:text-[#000000]/50 ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Token Ecosystem
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
@@ -76,13 +89,13 @@ const Header = () => {
                                                         <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
-                                                                    <a href="/roadmap">Roadmap</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/roadmap`}>Roadmap</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="/ecosystem">TRL Ecosystem</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/ecosystem`}>TRL Ecosystem</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <a className='cursor-pointer flex flex-row items-center gap-x-4' onClick={redirectToWhitePaper}>Whitepaper <img className='w-[14px] h-[14px]' src={whitePaperIcon}/></a>
+                                                                    <Link className='cursor-pointer hover:text-[#000]/50 transition-all duration-300 ease-in-out flex flex-row items-center gap-x-4' onClick={redirectToWhitePaper}>Whitepaper <img className='w-[14px] h-[14px]' src={whitePaperIcon}/></Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -100,7 +113,7 @@ const Header = () => {
                             </div>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="#">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all hover:text-[#000000]/50 ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Learn
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
@@ -116,13 +129,13 @@ const Header = () => {
                                                         <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
-                                                                    <a href="blog">Blog</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/blog`}>Blog</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="how-to-buy">How to buy</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/how-to-buy`}>How to buy</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="faq">FAQ</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/faq`}>FAQ</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -140,7 +153,7 @@ const Header = () => {
                             </div>
                             <div className="relative group inline mr-4">
                                 <a className="px-1" href="#">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                                    <span className="outfit-medium text-[#000000] transitiom-all hover:text-[#000000]/50 ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Company
                                     </span>
                                     <svg fill="currentcolor" viewBox="0 0 20 20" className="inline w-4 h-4 mt-0 group-hover:rotate-180 text-[#000000] group-hover:text-[#000000]">
@@ -156,10 +169,10 @@ const Header = () => {
                                                         <div className='lg:col-span-6 col-span-12'>
                                                             <ul className='flex flex-col gap-y-4 my-3'>
                                                                 <li>
-                                                                    <a href="/about">About</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/about`}>About</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <a href="/media">Media Release</a>
+                                                                    <Link className='hover:text-[#000]/50 transition-all duration-300 ease-in-out' to={`/media`}>Media Release</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -175,11 +188,11 @@ const Header = () => {
                                 </div>
 
                             </div>
-                            <a className="px-1" href="/contact">
-                                    <span className="outfit-medium text-[#000000] transitiom-all ease-in-out duration-300 lg:text-[16px] text-[14px]">
+                            <Link className="px-1" to={`/contact`}>
+                                    <span className="outfit-medium text-[#000000] transitiom-all hover:text-[#000000]/50 ease-in-out duration-300 lg:text-[16px] text-[14px]">
                                         Contact
                                     </span>
-                                </a>
+                                </Link>
                             
 
                         </div>

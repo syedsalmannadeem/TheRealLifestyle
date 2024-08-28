@@ -571,3 +571,10 @@ nav button span.sr-only {
   background: linear-gradient(to bottom, #FF4A3F, #088AB5);
   border-radius: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+

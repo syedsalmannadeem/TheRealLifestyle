@@ -94,7 +94,7 @@ const EcoSystem = () => {
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
                                     <img src={listtab1} className="md:mt-0 mt-8 w-full" alt=""/>
                                     <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
-                                      TRL Platform
+                                      BASE
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
                                       Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -106,7 +106,7 @@ const EcoSystem = () => {
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
                                     <img src={listtab2} className="md:mt-0 mt-8 w-full" alt=""/>
                                     <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
-                                      TRL Platform
+                                      Skale
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
                                       Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -118,7 +118,7 @@ const EcoSystem = () => {
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
                                     <img src={listtab3} className="md:mt-0 mt-8 w-full" alt=""/>
                                     <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
-                                      TRL Platform
+                                      IOTA
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
                                       Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -134,7 +134,7 @@ const EcoSystem = () => {
                               <div className='grid grid-cols-12 items-center md:gap-x-10'>
                                 <div className='md:col-span-6 col-span-12'>
                                   <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
-                                    TRL Platform
+                                    Cyberscope
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
                                     Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -153,7 +153,7 @@ const EcoSystem = () => {
                                 
                                 <div className='md:col-span-6 col-span-12'>
                                   <span className='block text-[24px] outfit-bold text-[#17271F] md:mt-0 mt-3'>
-                                    TRL Platform
+                                    IX Swap
                                   </span>
                                   <span className='block text-[16px] text-[#565656] md:max-w-[80%] mt-2 mb-5'>
                                     Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -173,7 +173,7 @@ const EcoSystem = () => {
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
                                     <img src={listtab4} className="md:mt-0 mt-8 w-full" alt=""/>
                                     <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
-                                      TRL Platform
+                                      Base Wallet
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
                                       Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -185,7 +185,7 @@ const EcoSystem = () => {
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
                                     <img src={listtab5} className="md:mt-0 mt-8 w-full" alt=""/>
                                     <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
-                                      TRL Platform
+                                      Wallet Connect
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
                                       Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
@@ -197,7 +197,7 @@ const EcoSystem = () => {
                                   <div className='bg-[#fff] shadow-md px-4 py-5 rounded-[12px]'>
                                     <img src={listtab6} className="md:mt-0 mt-8 w-full" alt=""/>
                                     <span className='block text-[20px] md:mt-2 mt-4 outfit-bold text-[#17271F]'>
-                                      TRL Platform
+                                      Metamask
                                     </span>
                                     <span className='block text-[13px] text-[#565656] mb-3'>
                                       Lorem ipsum dolor sit amet consectetur. A viverra amet ac ultrices. Vulputate tempor diam enim id at dui ullamcorper montes.
