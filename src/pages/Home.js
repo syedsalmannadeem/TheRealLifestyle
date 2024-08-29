@@ -1,8 +1,8 @@
 import React,{ useEffect, useRef, useState } from 'react';
-import { gsap } from '../assets/js/gsap.min.js';
-import ScrollTrigger from '../assets/js/ScrollTrigger.min.js';
-import ScrollSmoother from '../assets/js/ScrollSmoother.min.js';
-import SplitText from '../assets/js/SplitText.min.js';
+// import { gsap } from '../assets/js/gsap.min.js';
+// import ScrollTrigger from '../assets/js/ScrollTrigger.min.js';
+// import ScrollSmoother from '../assets/js/ScrollSmoother.min.js';
+// import SplitText from '../assets/js/SplitText.min.js';
 import shapeRuby from '../assets/images/shape-ruby.png';
 import emerald from '../assets/images/emerald-r.png';
 import bgComingSoon from '../assets/images/bgcomingsoon.png'
@@ -57,7 +57,7 @@ import investbgNew from '../assets/images/invest-bg-new.png'
 import livebgNew from '../assets/images/live-bg-new.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
+
 
 
 const Home = () => {
